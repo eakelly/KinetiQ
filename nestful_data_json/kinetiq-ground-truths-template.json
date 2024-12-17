@@ -1,0 +1,363 @@
+[
+    {
+        "name": "WeatherAPI.com_Forecast_Weather_API",
+        "host": "weatherapi-com.p.rapidapi.com",
+        "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_02481648-7c41-48cc-9b9f-e53596d38bab",
+        "endpoint": "/forecast.json",
+        "query_parameters": {
+            "q": "",
+            "days": "",
+            "lang": "",
+            "dt": "",
+            "hour": "",
+            "aqi": "",
+            "tides": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Booking.com_Flights_API",
+        "host": "booking-com15.p.rapidapi.com",
+        "url": "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
+        "endpoint": "/searchFlights.json",
+        "query_parameters": {
+            "fromId": "",
+            "toId": "",
+            "departDate": "",
+            "returnDate": "",
+            "adults": "",
+            "children": "",
+            "cabinClass": "",
+            "currency_code": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "SkyScrapperFlightSearch",
+        "host": "sky-scrapper.p.rapidapi.com",
+        "url": "https://rapidapi.com/apiheya/api/sky-scrapper/playground/apiendpoint_adcbe9c6-73a7-4db4-b95c-d9b552de558c",
+        "endpoint": "/api/v2/flights/searchFlightsComplete",
+        "query_parameters": {
+            "originSkyId": "",
+            "destinationSkyId": "",
+            "originEntityId": "",
+            "destinationEntityId": "",
+            "date": "",
+            "returnDate": "",
+            "cabinClass": "",
+            "adults": "",
+            "children": "",
+            "infants": "",
+            "sortBy": "",
+            "limit": "",
+            "carriersIds": "",
+            "currency": "",
+            "market": "",
+            "countryCode": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "SkyScrapperSearchAirport",
+        "host": "sky-scrapper.p.rapidapi.com",
+        "url": "https://rapidapi.com/apiheya/api/sky-scrapper/playground/apiendpoint_efcce954-2563-41cb-97fc-b2abe7851b3d",
+        "endpoint": "/api/v1/flights/searchAirport",
+        "query_parameters": {
+            "query": "",
+            "locale": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "TripadvisorSearchHotels",
+        "host": "tripadvisor16.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataCrawler/api/tripadvisor16/playground/apiendpoint_fae8f2c1-fefe-47fe-ba1e-0f50f95b3489",
+        "endpoint": "/api/v1/hotels/searchHotels",
+        "query_parameters": {
+            "geoId": "",
+            "checkIn": "",
+            "checkOut": "",
+            "pageNumber": "",
+            "sort": "",
+            "adults": "",
+            "rooms": "",
+            "childrenAges": "",
+            "currencyCode": "",
+            "healthSafety": "",
+            "deals": "",
+            "type": "",
+            "amenity": "",
+            "neighborhood": "",
+            "rating": "",
+            "class": "",
+            "style": "",
+            "distFrom": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "NewsAPISearchByKeyWord",
+        "host": "newsapi90.p.rapidapi.com",
+        "url": "https://rapidapi.com/strataconsultingllc/api/newsapi90/playground/apiendpoint_ac10bebc-6476-4cdf-886b-b9f5d6ef26c9",
+        "endpoint": "/search",
+        "query_parameters": {
+            "query": "",
+            "language": "",
+            "region": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "LocalBusinessData",
+        "host": "local-business-data.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/local-business-data/playground/apiendpoint_5593ecaf-f610-4358-aedd-3513aa43cdeb",
+        "endpoint": "/search",
+        "query_parameters": {
+            "query": "",
+            "limit": "",
+            "lat": "",
+            "lng": "",
+            "zoom": "",
+            "language": "",
+            "region": "",
+            "verified": "",
+            "business_status": "",
+            "extract_emails_and_contacts": "",
+            "fields": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "LocalBusinessDataBusinessReviews",
+        "host": "local-business-data.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/local-business-data/playground/apiendpoint_17004568-e6e7-4c85-b2a4-1c99ec7ca548",
+        "endpoint": "/business-reviews",
+        "query_parameters": {
+            "business_id": "",
+            "limit": "",
+            "offset": "",
+            "query": "",
+            "sortBy": "",
+            "fields": "",
+            "region": "",
+            "language": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "CipherCircuit_Math_Assistant_CalculateAllArithmeticOperations",
+        "host": "ciphercircuit-math-assistant.p.rapidapi.com",
+        "url": "https://rapidapi.com/hakitofficial24/api/ciphercircuit-math-assistant/playground/apiendpoint_f3f802c3-1aca-455b-8744-9e46a049f747",
+        "endpoint": "/calculate",
+        "query_parameters": {
+            "numbers": "",
+            "decimalPlaces": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Real-Time_Product_Search_Search",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_22971080-bb99-4bea-b069-5b2c11c8cb14",
+        "endpoint": "/search",
+        "query_parameters": {
+            "q": "",
+            "country": "",
+            "language": "",
+            "page": "",
+            "limit": "",
+            "sort_by": "",
+            "min_price": "",
+            "max_price": "",
+            "product_condition": "",
+            "free_returns": "",
+            "free_shipping": "",
+            "max_shipping_days": "",
+            "on_sale": "",
+            "store_id": "",
+            "other_filters": "",
+            "min_rating": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Reviews",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_776509db-ca16-4cba-a320-f83900eef25b",
+        "endpoint": "/product-reviews",
+        "query_parameters": {
+            "product_id": "",
+            "limit": "",
+            "cursor": "",
+            "rating": "",
+            "country": "",
+            "language": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Offers",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_72f10b45-1a4a-4d9c-990c-87053745c318",
+        "endpoint": "/product-offers",
+        "query_parameters": {
+            "product_id": "",
+            "page": "",
+            "country": "",
+            "language": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Details",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_c542ccd5-2a31-4be8-bda9-bc87d6359200",
+        "endpoint": "/product-details",
+        "query_parameters": {
+            "q": "",
+            "country": "",
+            "language": "",
+            "page": "",
+            "limit": "",
+            "sort_by": "",
+            "min_price": "",
+            "max_price": "",
+            "product_condition": "",
+            "free_returns": "",
+            "free_shipping": "",
+            "max_shipping_days": "",
+            "on_sale": "",
+            "store_id": "",
+            "other_filters": "",
+            "min_rating": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "WeatherAPI.com_Realtime_Weather_Api",
+        "host": "weatherapi-com.p.rapidapi.com",
+        "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_bef542ef-a177-4633-aacc-ee9703945037",
+        "endpoint": "/current.json",
+        "query_parameters": {
+            "q": "",
+            "days": "",
+            "lang": "",
+            "dt": "",
+            "hour": "",
+            "aqi": "",
+            "tides": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "WeatherAPI.com_Time_Zone_API",
+        "host": "weatherapi-com.p.rapidapi.com",
+        "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_e163d1c6-f2e1-4809-b433-4438da245f5e",
+        "endpoint": "/timezone.json",
+        "query_parameters": {
+            "q": "",
+            "days": "",
+            "lang": "",
+            "dt": "",
+            "hour": "",
+            "aqi": "",
+            "tides": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Tripadvisor_Get_Restaurant_Details",
+        "host": "tripadvisor16.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataCrawler/api/tripadvisor16/playground/apiendpoint_ab413135-dbc1-41b2-95ab-2470fed079c1",
+        "endpoint": "/api/v1/restaurant/getRestaurantDetailsV2",
+        "query_parameters": {
+            "restaurantsId": "",
+            "currencyCode": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Spotify_Scraper_List_Artist_Albums_Singles",
+        "host": "spotify-scraper.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataFanatic/api/spotify-scraper/playground/apiendpoint_768e91c5-7f09-4321-84b4-29ddef6c931f",
+        "endpoint": "/v1/artist/albums",
+        "query_parameters": {
+            "artistId": "",
+            "type": "",
+            "offset": "",
+            "limit": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Instagram_Info",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_59cb4f4c-55c0-41b5-807d-e39967e66c1d",
+        "endpoint": "/v1/info",
+        "query_parameters": {
+            "username_or_id_or_url": "",
+            "include_about": "",
+            "url_embed_safe": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Instagram_Followers",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_4f4c3199-f234-4978-8d94-ae3ca22aa64e",
+        "endpoint": "/v1/followers",
+        "query_parameters": {
+            "username_or_id_or_url": "",
+            "amount": "",
+            "pagination_token": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Instagram_Following",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_8d0da7e2-4689-4cdb-8182-1bd4650849ad",
+        "endpoint": "/v1/following",
+        "query_parameters": {
+            "username_or_id_or_url": "",
+            "amount": "",
+            "pagination_token": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Instagram_Posts_Reels",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_b1301387-dc09-4b1f-ba39-b7b51d186b40",
+        "endpoint": "/v1.2/posts",
+        "query_parameters": {
+            "username_or_id_or_url": "",
+            "pagination_token": "",
+            "url_embed_safe": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "Instagram_Search_User",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_dcdb7a36-a7ed-4501-a65b-3200093e1135",
+        "endpoint": "/v1/search_users",
+        "query_parameters": {
+            "search_query": "",
+            "url_embed_safe": ""
+        },
+        "llm_query": ""
+    },
+    {
+        "name": "SEC_Balance_Sheet",
+        "host": "last10k-company-v1.p.rapidapi.com",
+        "url": "https://rapidapi.com/last10k/api/sec-filings/playground/5920a047e4b00fa921e13cec",
+        "endpoint": "/v1/company/balancesheet",
+        "query_parameters": {
+            "ticker": "",
+            "formtype": "",
+            "filingorder": ""
+        },
+        "llm_query": ""
+    }
+]

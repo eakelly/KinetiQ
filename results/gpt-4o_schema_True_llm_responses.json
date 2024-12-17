@@ -1,0 +1,85 @@
+[
+    "{\"q\": \"London\", \"days\": \"1\", \"aqi\": \"yes\"}",
+    {
+        "fromId": "NYC",
+        "toId": "STO",
+        "departDate": "2023-10-21",
+        "adults": "2"
+    },
+    {
+        "originSkyId": "NYC",
+        "destinationSkyId": "STO",
+        "originEntityId": "nyc",
+        "destinationEntityId": "sto",
+        "date": "2023-12-01",
+        "adults": "2",
+        "infants": "1"
+    },
+    "{\"query\": \"NYC\", \"locale\": \"es\"}",
+    {
+        "geoId": "60763",
+        "checkIn": "2023-10-20",
+        "checkOut": "2023-10-27",
+        "adults": "2",
+        "rooms": "1"
+    },
+    {
+        "geoId": "New York City",
+        "checkIn": "2023-11-16",
+        "checkOut": "2023-11-20",
+        "rooms": "2",
+        "adults": "2"
+    },
+    "{'query': 'climate change', 'language': 'en', 'region': 'IE'}",
+    {
+        "query": "hotel Boston",
+        "business_status": "CLOSED",
+        "extract_emails_and_contacts": "true",
+        "limit": "1"
+    },
+    {
+        "business_id": "YOUR_BUSINESS_ID",
+        "region": "IE"
+    },
+    {
+        "numbers": "1.7777 - 2.9057345",
+        "decimalPlaces": "5"
+    },
+    "{\"q\": \"Tamagotchi\", \"country\": \"UK\", \"product_condition\": \"new\", \"on_sale\": \"true\"}",
+    {
+        "q": "Tamagotchi",
+        "max_price": "20",
+        "product_condition": "new"
+    },
+    {
+        "product_id": "11577822456427762145",
+        "country": "US",
+        "language": "es"
+    },
+    "{'product_id': '11577822456427762145', 'country': 'US', 'language': 'es'}",
+    {
+        "q": "11577822456427762145",
+        "country": "KR",
+        "language": "en"
+    },
+    "{\"q\": \"Paris\", \"days\": \"7\", \"tides\": \"yes\"}",
+    "{\"restaurantsId\": \"g60763-d12425739\", \"currencyCode\": \"SEK\"}",
+    {
+        "artistId": "2uFUBdaVGtyMqckSeCl0Qj"
+    },
+    "{\"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\"}",
+    {
+        "username_or_id_or_url": "createdfromthestars"
+    },
+    "{\"username_or_id_or_url\": \"createdfromthestars\", \"amount\": \"20\"}",
+    {
+        "username_or_id_or_url": "createdfromthestars",
+        "amount": "20"
+    },
+    {
+        "username_or_id_or_url": "kiyomi_bori",
+        "url_embed_safe": "true"
+    },
+    "{\"search_query\": \"kiyomi_bori\"}",
+    "{\"ticker\": \"MSFT\", \"formtype\": \"10-Q\", \"filingorder\": \"desc\"}"
+]

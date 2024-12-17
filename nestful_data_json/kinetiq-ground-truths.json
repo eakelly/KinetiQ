@@ -1,0 +1,301 @@
+[
+    {
+        "name": "WeatherAPI.com_Forecast_Weather_API",
+        "host": "weatherapi-com.p.rapidapi.com",
+        "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_02481648-7c41-48cc-9b9f-e53596d38bab",
+        "endpoint": "/forecast.json",
+        "query_parameters": {
+            "q": "London",
+            "days": "1",
+            "aqi": "yes"
+        },
+        "llm_query": "What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality"
+    },
+    {
+        "name": "Booking.com_Flights_API",
+        "host": "booking-com15.p.rapidapi.com",
+        "url": "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
+        "endpoint": "/searchFlights.json",
+        "query_parameters": {
+            "fromId": "JFK.AIRPORT",
+            "toId": "STO.AIRPORT",
+            "departDate": "2024-12-15",
+            "adults": "2",
+            "cabinClass": "ECONOMY"
+        },
+        "llm_query": "I need an affordable flight for today's date from NYC airport to Stockholm for my husband and I"
+    },
+    {
+        "name": "SkyScrapperFlightSearch",
+        "host": "sky-scrapper.p.rapidapi.com",
+        "url": "https://rapidapi.com/apiheya/api/sky-scrapper/playground/apiendpoint_adcbe9c6-73a7-4db4-b95c-d9b552de558c",
+        "endpoint": "/api/v2/flights/searchFlightsComplete",
+        "query_parameters": {
+            "originSkyId": "NYC",
+            "destinationSkyId": "STO",
+            "adults": "2",
+            "infants": "1",
+            "currency": "SEK"
+        },
+        "llm_query": "My wife, newborn, and I need to visit her parents in Stockholm. We're leaving from NYC."
+    },
+    {
+        "name": "SkyScrapperSearchAirport",
+        "host": "sky-scrapper.p.rapidapi.com",
+        "url": "https://rapidapi.com/apiheya/api/sky-scrapper/playground/apiendpoint_efcce954-2563-41cb-97fc-b2abe7851b3d",
+        "endpoint": "/api/v1/flights/searchAirport",
+        "query_parameters": {
+            "query": "NYC",
+            "locale": "es-MX"
+        },
+        "llm_query": "I need flights from NYC but I can't understand English, can you translate the info for me?"
+    },
+    {
+        "name": "TripadvisorSearchHotels",
+        "host": "tripadvisor16.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataCrawler/api/tripadvisor16/playground/apiendpoint_fae8f2c1-fefe-47fe-ba1e-0f50f95b3489",
+        "endpoint": "/api/v1/hotels/searchHotels",
+        "query_parameters": {
+            "geoId": "NYC",
+            "checkIn": "2024-12-16",
+            "checkOut": "2024-12-20",
+            "adults": "2",
+            "currencyCode": "USD"
+        },
+        "llm_query": "I need a hotel for my husband and I in NYC. We'll be staying from today until next Friday"
+    },
+    {
+        "name": "TripadvisorSearchHotels",
+        "host": "tripadvisor16.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataCrawler/api/tripadvisor16/playground/apiendpoint_fae8f2c1-fefe-47fe-ba1e-0f50f95b3489",
+        "endpoint": "/api/v1/hotels/searchHotels",
+        "query_parameters": {
+            "geoId": "NYC",
+            "checkIn": "2024-12-16",
+            "checkOut": "2024-12-20",
+            "adults": "2",
+            "rooms": "2",
+            "currencyCode": "USD"
+        },
+        "llm_query": "I need separate rooms for my coworker and I on a business trip. We'll be in NYC from the 16th to the 20th."
+    },
+    {
+        "name": "NewsAPISearchByKeyWord",
+        "host": "newsapi90.p.rapidapi.com",
+        "url": "https://rapidapi.com/strataconsultingllc/api/newsapi90/playground/apiendpoint_ac10bebc-6476-4cdf-886b-b9f5d6ef26c9",
+        "endpoint": "/search",
+        "query_parameters": {
+            "query": "Climate Change",
+            "language": "",
+            "region": "IE"
+        },
+        "llm_query": "I'm looking for articles about climate change in Ireland."
+    },
+    {
+        "name": "LocalBusinessData",
+        "host": "local-business-data.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/local-business-data/playground/apiendpoint_5593ecaf-f610-4358-aedd-3513aa43cdeb",
+        "endpoint": "/search",
+        "query_parameters": {
+            "query": "Hotels in Boston, USA",
+            "business_status": "CLOSED",
+            "extract_emails_and_contacts": true
+        },
+        "llm_query": "I need to find the name of the hotel I stayed at in Boston, but I think it's closed down now. I just need the email address for it."
+    },
+    {
+        "name": "LocalBusinessDataBusinessReviews",
+        "host": "local-business-data.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/local-business-data/playground/apiendpoint_17004568-e6e7-4c85-b2a4-1c99ec7ca548",
+        "endpoint": "/business-reviews",
+        "query_parameters": {
+            "business_id": "0x89c259b5a9bd152b:0x31453e62a3be9f76",
+            "region": "ie"
+        },
+        "llm_query": "I'm looking for a review on this business, but for their Ireland location"
+    },
+    {
+        "name": "CipherCircuit_Math_Assistant_CalculateAllArithmeticOperations",
+        "host": "ciphercircuit-math-assistant.p.rapidapi.com",
+        "url": "https://rapidapi.com/hakitofficial24/api/ciphercircuit-math-assistant/playground/apiendpoint_f3f802c3-1aca-455b-8744-9e46a049f747",
+        "endpoint": "/calculate",
+        "query_parameters": {
+            "numbers": "1.7777, -, 2.9057345",
+            "decimalPlaces": "5"
+        },
+        "llm_query": "Give me the answer to 1.7777 - 2.9057345 to the nearest 5 decimal places."
+    },
+    {
+        "name": "Real-Time_Product_Search_Search",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_22971080-bb99-4bea-b069-5b2c11c8cb14",
+        "endpoint": "/search",
+        "query_parameters": {
+            "q": "Tamagotchi",
+            "country": "UK",
+            "product_condition": "NEW",
+            "on_sale": true
+        },
+        "llm_query": "I want to buy a brand new Tamagotchi for my niece. Are there any on sale in the UK?"
+    },
+    {
+        "name": "Real-Time_Product_Search_Search",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_22971080-bb99-4bea-b069-5b2c11c8cb14",
+        "endpoint": "/search",
+        "query_parameters": {
+            "q": "Tamagotchi",
+            "max_price": "20",
+            "product_condition": "NEW"
+        },
+        "llm_query": "I want to buy a brand new Tamagotchi for my niece, but my budget is $20."
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Reviews",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_776509db-ca16-4cba-a320-f83900eef25b",
+        "endpoint": "/product-reviews",
+        "query_parameters": {
+            "product_id": "11577822456427762145",
+            "country": "us",
+            "language": "es"
+        },
+        "llm_query": "I want to know if I should buy product id 11577822456427762145. I'm from the US but I can understand Spanish better."
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Offers",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_72f10b45-1a4a-4d9c-990c-87053745c318",
+        "endpoint": "/product-offers",
+        "query_parameters": {
+            "product_id": "11577822456427762145",
+            "country": "us",
+            "language": "es"
+        },
+        "llm_query": "I'm looking for offers on product id 11577822456427762145. I'm from the US but want to send the offers to my mom who speaks Spanish."
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Details",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_c542ccd5-2a31-4be8-bda9-bc87d6359200",
+        "endpoint": "/product-details",
+        "query_parameters": {
+            "product_id": "11577822456427762145",
+            "country": "kr",
+            "language": "en"
+        },
+        "llm_query": "Can you tell me about product id 11577822456427762145 available in Korea? I can't read Korean though."
+    },
+    {
+        "name": "WeatherAPI.com_Realtime_Weather_Api",
+        "host": "weatherapi-com.p.rapidapi.com",
+        "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_bef542ef-a177-4633-aacc-ee9703945037",
+        "endpoint": "/current.json",
+        "query_parameters": {
+            "q": "Paris",
+            "days": "7",
+            "tides": "yes"
+        },
+        "llm_query": "I'm in Paris for the week and want to visit the beach. What does the weather look like this week and should I worry about high tides?"
+    },
+    {
+        "name": "Tripadvisor_Get_Restaurant_Details",
+        "host": "tripadvisor16.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataCrawler/api/tripadvisor16/playground/apiendpoint_ab413135-dbc1-41b2-95ab-2470fed079c1",
+        "endpoint": "/api/v1/restaurant/getRestaurantDetailsV2",
+        "query_parameters": {
+            "restaurantsId": "Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York",
+            "currencyCode": "SEK"
+        },
+        "llm_query": "I want to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York when I'm in NYC next week. I'm from Sweden so I want to know the prices in swedish krona."
+    },
+    {
+        "name": "Spotify_Scraper_List_Artist_Albums_Singles",
+        "host": "spotify-scraper.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataFanatic/api/spotify-scraper/playground/apiendpoint_768e91c5-7f09-4321-84b4-29ddef6c931f",
+        "endpoint": "/v1/artist/albums",
+        "query_parameters": {
+            "artistId": "2uFUBdaVGtyMqckSeCl0Qj",
+            "type": "album"
+        },
+        "llm_query": "When did artist id 2uFUBdaVGtyMqckSeCl0Qj come out with his album Experience?"
+    },
+    {
+        "name": "Spotify_Scraper_List_Artist_Albums_Singles",
+        "host": "spotify-scraper.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataFanatic/api/spotify-scraper/playground/apiendpoint_768e91c5-7f09-4321-84b4-29ddef6c931f",
+        "endpoint": "/v1/artist/albums",
+        "query_parameters": {
+            "artistId": "2uFUBdaVGtyMqckSeCl0Qj",
+            "type": "single"
+        },
+        "llm_query": "When did artist id 2uFUBdaVGtyMqckSeCl0Qj come out with his song Night?"
+    },
+    {
+        "name": "Instagram_Info",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_59cb4f4c-55c0-41b5-807d-e39967e66c1d",
+        "endpoint": "/v1/info",
+        "query_parameters": {
+            "username_or_id_or_url": "createdfromthestars",
+            "include_about": "true"
+        },
+        "llm_query": "I'm curious about when the user createdfromthestars joined Instagram?"
+    },
+    {
+        "name": "Instagram_Followers",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_4f4c3199-f234-4978-8d94-ae3ca22aa64e",
+        "endpoint": "/v1/followers",
+        "query_parameters": {
+            "username_or_id_or_url": "createdfromthestars",
+            "amount": "20"
+        },
+        "llm_query": "Can you give me at least 20 followers following the user createdfromthestars?"
+    },
+    {
+        "name": "Instagram_Following",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_8d0da7e2-4689-4cdb-8182-1bd4650849ad",
+        "endpoint": "/v1/following",
+        "query_parameters": {
+            "username_or_id_or_url": "createdfromthestars",
+            "amount": "20"
+        },
+        "llm_query": "Can you give me at least 20 people that the user createdfromthestars follows?"
+    },
+    {
+        "name": "Instagram_Posts_Reels",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_b1301387-dc09-4b1f-ba39-b7b51d186b40",
+        "endpoint": "/v1.2/posts",
+        "query_parameters": {
+            "username_or_id_or_url": "kiyomi_bori",
+            "url_embed_safe": "true"
+        },
+        "llm_query": "I want to see posts by kiyomi_bori and embed them on my website."
+    },
+    {
+        "name": "Instagram_Search_User",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_dcdb7a36-a7ed-4501-a65b-3200093e1135",
+        "endpoint": "/v1/search_users",
+        "query_parameters": {
+            "search_query": "kiyomi_bori",
+            "url_embed_safe": "true"
+        },
+        "llm_query": "Show me kiyomi_bori profile so I can put the links on my website."
+    },
+    {
+        "name": "SEC_Balance_Sheet",
+        "host": "last10k-company-v1.p.rapidapi.com",
+        "url": "https://rapidapi.com/last10k/api/sec-filings/playground/5920a047e4b00fa921e13cec",
+        "endpoint": "/v1/company/balancesheet",
+        "query_parameters": {
+            "ticker": "msft",
+            "formtype": "10-q",
+            "filingorder": "10"
+        },
+        "llm_query": "Show me the last 10 quarterly reports for MSFT."
+    }
+]

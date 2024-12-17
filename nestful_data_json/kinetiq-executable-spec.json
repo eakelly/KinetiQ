@@ -1,0 +1,1128 @@
+[
+    {
+        "name": "WeatherAPI.com_Forecast_Weather_API",
+        "description": "Fetch forecast weather information based on various query parameters.",
+        "method": "GET",
+        "endpoint": "/forecast.json",
+        "host": "weatherapi-com.p.rapidapi.com",
+        "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_02481648-7c41-48cc-9b9f-e53596d38bab",
+        "query_parameters": {
+            "q": {
+                "type": "String",
+                "description": "Query parameter based on which data is sent back. It could be one of the following: Latitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508, city name e.g.: q=Paris, US zip e.g: q=10001, UK postcode e.g: q=SW1, Canada postal code e.g: q=G2J, metar:<metar_code> e.g: q=metar:EGLL, iata:<3 digit airport code> e.g: q=iata:DXB, auto:ip for IP lookup, IP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
+                "required": true
+            },
+            "days": {
+                "type": "Number",
+                "description": "Number of days of forecast required (optional)",
+                "required": false
+            },
+            "lang": {
+                "type": "String",
+                "description": "Returns 'condition:text' field in API in the desired language (optional)",
+                "required": false
+            },
+            "dt": {
+                "type": "Date (yyyy-mm-dd)",
+                "description": "Specific date for the forecast (optional). It should be between today and the next 10 days in yyyy-MM-dd format.",
+                "required": false
+            },
+            "hour": {
+                "type": "Number",
+                "description": "Restricting forecast or history output to a specific hour in a given day. (optional). Must be in 24 hour.",
+                "required": false
+            },
+            "aqi": {
+                "type": "String",
+                "description": "Enable/Disable Air Quality data in forecast API output: aqi=yes or aqi=no",
+                "required": false
+            },
+            "tides": {
+                "type": "String",
+                "description": "Enable/Disable Tide data in Marine API output: tides=yes or tides=no",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Booking.com_Flights_API",
+        "description": "Fetch flights based on query parameters.",
+        "method": "GET",
+        "endpoint": "/searchFlights.json",
+        "host": "booking-com15.p.rapidapi.com",
+        "url": "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
+        "query_parameters": {
+            "fromId": {
+                "type": "String",
+                "description": "From/Departure location Id. fromId can be retrieved from api/v1/flights/searchDestination(Search Flight Location) endpoint in Flights collection as id. In format <Airport Code>.AIRPORT",
+                "required": true
+            },
+            "toId": {
+                "type": "String",
+                "description": "To/Arrival location Id. toId can be retrieved from api/v1/flights/searchDestination(Search Flight Location) endpoint in Flights collection as id. In format <Airport Code>.AIRPORT",
+                "required": true
+            },
+            "departDate": {
+                "type": "Date (yyyy-mm-dd)",
+                "description": "Departure or travel date. Format: YYYY-MM-DD",
+                "required": true
+            },
+            "returnDate": {
+                "type": "Date (yyyy-mm-dd)",
+                "description": "Return date. Format: YYYY-MM-DD",
+                "required": false
+            },
+            "adults": {
+                "type": "Number",
+                "description": "The number of guests who are 18 years of age or older. The default value is set to 1.",
+                "required": false
+            },
+            "children": {
+                "type": "Number",
+                "description": "The number of children, including infants, who are under 18. Example: Child 1 Age = 8 months Child 2 Age = 1 year Child 3 Age = 17 years Here is what the request parameter would look like: children_age: 0,1,17",
+                "required": false
+            },
+            "cabinClass": {
+                "type": "String",
+                "description": "Search for flights that match the cabin class specified. Cabin call can be either ECONOMY, PREMIUM_ECONOMY, BUSINESS or FIRST.",
+                "required": false
+            },
+            "currency_code": {
+                "type": "String",
+                "description": "The currency code. currency_code can be retrieved from api/v1/meta/getCurrency(Get Currency) endpoint in Hotels collection.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "SkyScrapperFlightSearch",
+        "description": "Retrieves available flights for a given route using Skyscrapper API.",
+        "method": "GET",
+        "endpoint": "/api/v2/flights/searchFlightsComplete",
+        "host": "sky-scrapper.p.rapidapi.com",
+        "url": "https://rapidapi.com/apiheya/api/sky-scrapper/playground/apiendpoint_adcbe9c6-73a7-4db4-b95c-d9b552de558c",
+        "query_parameters": {
+            "originSkyId": {
+                "type": "string",
+                "description": "The originSkyId code can be extracted from the Search Airport API in the Flights collection.",
+                "required": true
+            },
+            "destinationSkyId": {
+                "type": "string",
+                "description": "The destinationSkyId code can be extracted from the Search Airport API in the Flights collection.",
+                "required": true
+            },
+            "originEntityId": {
+                "type": "string",
+                "description": "The originEntityId code can be extracted from the Search Airport API in the Flights collection.",
+                "required": true
+            },
+            "destinationEntityId": {
+                "type": "string",
+                "description": "The destinationEntityId code can be extracted from the Search Airport API in the Flights collection.",
+                "required": true
+            },
+            "date": {
+                "type": "string",
+                "description": "Departure or travel date. Format: YYYY-MM-DD",
+                "required": true
+            },
+            "returnDate": {
+                "type": "string",
+                "description": "Return date. Format: YYYY-MM-DD",
+                "required": false
+            },
+            "cabinClass": {
+                "type": "string",
+                "description": "Cabin class. Default value: economy",
+                "enum": [
+                    "economy",
+                    "premium_economy",
+                    "business",
+                    "first"
+                ],
+                "required": false
+            },
+            "adults": {
+                "type": "number",
+                "description": "Adults: 12+ years. Default value: 1",
+                "required": false
+            },
+            "children": {
+                "type": "number",
+                "description": "Children: 2-12 years. Default value: 0",
+                "required": false
+            },
+            "infants": {
+                "type": "number",
+                "description": "Infants: Under 2 years. Default value: 0",
+                "required": false
+            },
+            "sortBy": {
+                "type": "string",
+                "description": "Sort By. Default value: best",
+                "allowed_values": [
+                    "best",
+                    "price_high",
+                    "cheapest",
+                    "fastest",
+                    "outbound_take_off_time",
+                    "outbound_landing_time",
+                    "return_take_off_time",
+                    "return_landing_time"
+                ],
+                "required": false
+            },
+            "limit": {
+                "type": "number",
+                "description": "Set a limit on the amount of records. Example: 100",
+                "required": false
+            },
+            "carriersIds": {
+                "type": "string",
+                "description": "Filter the flight itinerary data by the carrier. Comma-separated format for multiple carriers. Example: -32672,-31435",
+                "required": false
+            },
+            "currency": {
+                "type": "string",
+                "description": "Currency code. Default value: USD",
+                "required": false
+            },
+            "market": {
+                "type": "string",
+                "description": "Market code. Default value: en-US",
+                "required": false
+            },
+            "countryCode": {
+                "type": "string",
+                "description": "Country code. Default value: US",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "SkyScrapperSearchAirport",
+        "description": "Search for airports using a location name.",
+        "method": "GET",
+        "endpoint": "/api/v1/flights/searchAirport",
+        "host": "sky-scrapper.p.rapidapi.com",
+        "url": "https://rapidapi.com/apiheya/api/sky-scrapper/playground/apiendpoint_efcce954-2563-41cb-97fc-b2abe7851b3d",
+        "query_parameters": {
+            "query": {
+                "type": "string",
+                "description": "Name of the location where the airport is situated.",
+                "required": true
+            },
+            "locale": {
+                "type": "string",
+                "description": "Response language. Locale can be retrieved from the /api/v1/getLocal endpoint as id parameter.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "TripadvisorSearchHotels",
+        "description": "Retrieves available hotels in a given location using Tripadvisor API.",
+        "method": "GET",
+        "endpoint": "/api/v1/hotels/searchHotels",
+        "host": "tripadvisor16.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataCrawler/api/tripadvisor16/playground/apiendpoint_fae8f2c1-fefe-47fe-ba1e-0f50f95b3489",
+        "query_parameters": {
+            "geoId": {
+                "type": "string",
+                "description": "Geo ID of the location retrieved from the Search Location API.",
+                "required": true
+            },
+            "checkIn": {
+                "type": "string",
+                "description": "Check-in date. Format: YYYY-MM-DD",
+                "required": true
+            },
+            "checkOut": {
+                "type": "string",
+                "description": "Check-out date. Format: YYYY-MM-DD",
+                "required": true
+            },
+            "pageNumber": {
+                "type": "number",
+                "description": "Page number. The default page number is 1.",
+                "required": false
+            },
+            "sort": {
+                "type": "string",
+                "description": "Sort order for results.",
+                "required": false
+            },
+            "adults": {
+                "type": "number",
+                "description": "Number of adults.",
+                "required": false
+            },
+            "rooms": {
+                "type": "number",
+                "description": "Number of rooms.",
+                "required": false
+            },
+            "childrenAges": {
+                "type": "array",
+                "description": "Ages of children.",
+                "required": false
+            },
+            "currencyCode": {
+                "type": "string",
+                "description": "Currency code.",
+                "required": false
+            },
+            "healthSafety": {
+                "type": "array",
+                "description": "Health and safety filters.",
+                "required": false
+            },
+            "deals": {
+                "type": "array",
+                "description": "Deal filters.",
+                "required": false
+            },
+            "type": {
+                "type": "array",
+                "description": "Type filters.",
+                "required": false
+            },
+            "amenity": {
+                "type": "array",
+                "description": "Amenity filters.",
+                "required": false
+            },
+            "neighborhood": {
+                "type": "array",
+                "description": "Neighborhood filters.",
+                "required": false
+            },
+            "rating": {
+                "type": "number",
+                "description": "Minimum rating.",
+                "required": false
+            },
+            "class": {
+                "type": "array",
+                "description": "Class filters.",
+                "required": false
+            },
+            "style": {
+                "type": "array",
+                "description": "Style filters.",
+                "required": false
+            },
+            "distFrom": {
+                "type": "string",
+                "description": "Distance from a location.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "NewsAPISearchByKeyWord",
+        "description": "Search for news articles by topic using the NewsAPI.",
+        "method": "GET",
+        "endpoint": "/search",
+        "host": "newsapi90.p.rapidapi.com",
+        "url": "https://rapidapi.com/strataconsultingllc/api/newsapi90/playground/apiendpoint_ac10bebc-6476-4cdf-886b-b9f5d6ef26c9",
+        "query_parameters": {
+            "query": {
+                "type": "string",
+                "description": "Search query for the topic (e.g., climate change)",
+                "required": false
+            },
+            "language": {
+                "type": "string",
+                "description": "Language for the search results (e.g., 'en', 'es', 'fr')",
+                "required": false
+            },
+            "region": {
+                "type": "string",
+                "description": "Region for the search results (e.g., 'US', 'GB', 'CA')",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "LocalBusinessData",
+        "description": "Search for businesses based on specified criteria.",
+        "method": "GET",
+        "endpoint": "/search",
+        "host": "local-business-data.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/local-business-data/playground/apiendpoint_5593ecaf-f610-4358-aedd-3513aa43cdeb",
+        "query_parameters": {
+            "query": {
+                "type": "string",
+                "description": "Search query or keyword.",
+                "required": true
+            },
+            "limit": {
+                "type": "number",
+                "description": "Maximum number of businesses to return (1-500).",
+                "default": 20,
+                "required": false
+            },
+            "lat": {
+                "type": "number",
+                "description": "Latitude of the coordinates point for biased results.",
+                "required": false
+            },
+            "lng": {
+                "type": "number",
+                "description": "Longitude of the coordinates point for biased results.",
+                "required": false
+            },
+            "zoom": {
+                "type": "string",
+                "description": "Zoom level for the search viewport determined by lat, lng.",
+                "default": "13",
+                "required": false
+            },
+            "language": {
+                "type": "string",
+                "description": "Language of the results (ISO 639-1 code).",
+                "default": "en",
+                "required": false
+            },
+            "region": {
+                "type": "string",
+                "description": "Region or country code to query Google Maps.",
+                "default": "us",
+                "required": false
+            },
+            "verified": {
+                "type": "boolean",
+                "description": "Filter only verified businesses.",
+                "required": false
+            },
+            "business_status": {
+                "type": "string",
+                "description": "Business status to filter (comma-separated values: OPEN, CLOSED_TEMPORARILY, CLOSED).",
+                "required": false
+            },
+            "extract_emails_and_contacts": {
+                "type": "boolean",
+                "description": "Extract emails, contacts, and social profiles for each business in the response.",
+                "required": false
+            },
+            "fields": {
+                "type": "string",
+                "description": "Comma-separated list of business fields to include in the response.",
+                "example": "business_id,type,phone_number,full_address",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "LocalBusinessDataBusinessReviews",
+        "description": "Search for businesses reviews based on specified criteria.",
+        "method": "GET",
+        "endpoint": "/business-reviews",
+        "host": "local-business-data.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/local-business-data/playground/apiendpoint_17004568-e6e7-4c85-b2a4-1c99ec7ca548",
+        "query_parameters": {
+            "business_id": {
+                "type": "string",
+                "description": "Search business ID",
+                "required": true
+            },
+            "limit": {
+                "type": "number",
+                "description": "Maximum number of businesses reviews to return (1-500).",
+                "default": 20,
+                "required": false
+            },
+            "offset": {
+                "type": "number",
+                "description": "Number of business reviews to skip (for pagination/scrolling).",
+                "default": 0,
+                "required": false
+            },
+            "query": {
+                "type": "string",
+                "description": "Return reviews matching a text query.",
+                "required": false
+            },
+            "sortBy": {
+                "type": "string",
+                "description": "How to sort the reviews in the results.",
+                "required": false,
+                "allowed_values": [
+                    "most_relevant",
+                    "newest",
+                    "highest_ranking",
+                    "lowest_ranking",
+                    "do not include in request"
+                ],
+                "default": "most_relevant"
+            },
+            "fields": {
+                "type": "string",
+                "description": "A comma separated list of review fields to include in the response (field projection). By default all fields are returned.",
+                "required": false
+            },
+            "region": {
+                "type": "string",
+                "description": "Query Google Maps from a particular region or country.",
+                "default": "us",
+                "required": false
+            },
+            "language": {
+                "type": "string",
+                "description": "Set the language of the results.",
+                "default": "en",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "CipherCircuit_Math_Assistant_CalculateAllArithmeticOperations",
+        "description": "Calculates all arithmetic operations.",
+        "method": "GET",
+        "endpoint": "/calculate",
+        "host": "ciphercircuit-math-assistant.p.rapidapi.com",
+        "url": "https://rapidapi.com/hakitofficial24/api/ciphercircuit-math-assistant/playground/apiendpoint_f3f802c3-1aca-455b-8744-9e46a049f747",
+        "query_parameters": {
+            "numbers": {
+                "type": "String",
+                "description": "A string containing the numbers and arithmetic operations to be calculated.",
+                "required": true
+            },
+            "decimalPlaces": {
+                "type": "Number",
+                "description": "The number of decimal places to round the result to.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Real-Time_Product_Search_Search",
+        "description": "API to retrieve real-time product details, offers, and reviews from Amazon based on specific queries.",
+        "method": "GET",
+        "endpoint": "/search",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_22971080-bb99-4bea-b069-5b2c11c8cb14",
+        "query_parameters": {
+            "q": {
+                "type": "String",
+                "description": "Search query or keyword.",
+                "required": true
+            },
+            "country": {
+                "type": "String",
+                "description": "Country code of the region/country to return results for.",
+                "default": "us",
+                "allowed_values": [
+                    "us",
+                    "gb",
+                    "ca",
+                    "de",
+                    "fr"
+                ],
+                "required": false
+            },
+            "language": {
+                "type": "String",
+                "description": "Language of the results.",
+                "default": "en",
+                "allowed_values": [
+                    "en",
+                    "fr",
+                    "de",
+                    "es",
+                    "it"
+                ],
+                "required": false
+            },
+            "page": {
+                "type": "Number",
+                "description": "Results page to return.",
+                "default": 1,
+                "allowed_values": "1-100",
+                "required": false
+            },
+            "limit": {
+                "type": "Number",
+                "description": "Maximum number of products to return.",
+                "default": 30,
+                "allowed_values": "1-100",
+                "required": false
+            },
+            "sort_by": {
+                "type": "Enum",
+                "description": "Sort product offers by best match, top rated, lowest price, or highest price.",
+                "default": "BEST_MATCH",
+                "allowed_values": [
+                    "BEST_MATCH",
+                    "TOP_RATED",
+                    "LOWEST_PRICE",
+                    "HIGHEST_PRICE"
+                ],
+                "required": false
+            },
+            "min_price": {
+                "type": "Number",
+                "description": "Minimum price filter for product offers.",
+                "required": false
+            },
+            "max_price": {
+                "type": "Number",
+                "description": "Maximum price filter for product offers.",
+                "required": false
+            },
+            "product_condition": {
+                "type": "Enum",
+                "description": "Filter products by condition (ANY, NEW, USED, REFURBISHED).",
+                "default": "ANY",
+                "allowed_values": [
+                    "ANY",
+                    "NEW",
+                    "USED",
+                    "REFURBISHED"
+                ],
+                "required": false
+            },
+            "free_returns": {
+                "type": "Boolean",
+                "description": "Filter product offers that offer free returns.",
+                "required": false
+            },
+            "free_shipping": {
+                "type": "Boolean",
+                "description": "Filter product offers that offer free shipping/delivery.",
+                "required": false
+            },
+            "max_shipping_days": {
+                "type": "Number",
+                "description": "Maximum shipping days filter for product offers.",
+                "required": false
+            },
+            "on_sale": {
+                "type": "Boolean",
+                "description": "Filter product offers that are currently on sale.",
+                "required": false
+            },
+            "store_id": {
+                "type": "String",
+                "description": "Filter product offers from specific stores (comma-separated list of store IDs).",
+                "required": false
+            },
+            "other_filters": {
+                "type": "String",
+                "description": "Other dynamic filters (e.g., by Size, Color) separated by commas.",
+                "required": false
+            },
+            "min_rating": {
+                "type": "Enum",
+                "description": "Filter products by minimum rating.",
+                "default": "ANY",
+                "allowed_values": [
+                    "ANY",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Reviews",
+        "description": "Fetches reviews for a specific product.",
+        "method": "GET",
+        "endpoint": "/product-reviews",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_776509db-ca16-4cba-a320-f83900eef25b",
+        "query_parameters": {
+            "product_id": {
+                "type": "String",
+                "description": "Product ID of the product for which to fetch offers.",
+                "required": true
+            },
+            "limit": {
+                "type": "Number",
+                "description": "Maximum number of product reviews to return.",
+                "default": 10,
+                "required": false
+            },
+            "cursor": {
+                "type": "number",
+                "description": "A cursor to get the next set of results, it can be used for for paging purposes. Note: the cursor value for the next set of results is returned by this endpoint under data.cursor.",
+                "required": false
+            },
+            "rating": {
+                "type": "number",
+                "description": "Only return reviews with user rating greater than the specified value.",
+                "required": false
+            },
+            "country": {
+                "type": "string",
+                "description": "Country code of the region/country to return offers for.",
+                "default": "us",
+                "required": false
+            },
+            "language": {
+                "type": "string",
+                "description": "The language of the results.",
+                "default": "en",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Offers",
+        "description": "Fetches offers for a specific product.",
+        "method": "GET",
+        "endpoint": "/product-offers",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_72f10b45-1a4a-4d9c-990c-87053745c318",
+        "query_parameters": {
+            "product_id": {
+                "type": "String",
+                "description": "Product ID of the product for which to fetch offers.",
+                "required": true
+            },
+            "page": {
+                "type": "Number",
+                "description": "The page to return. Each page contains offers from 10 different stores (potentially resulting in more than 10 offers).",
+                "default": 1,
+                "required": false
+            },
+            "country": {
+                "type": "String",
+                "description": "Country code of the region/country to return offers for.",
+                "default": "us",
+                "required": false
+            },
+            "language": {
+                "type": "String",
+                "description": "The language of the results.",
+                "default": "en",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Real-Time_Product_Search_Product_Details",
+        "description": "Retrieves real-time product details based on search queries.",
+        "method": "GET",
+        "endpoint": "/product-details",
+        "host": "real-time-product-search.p.rapidapi.com",
+        "url": "https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-product-search/playground/endpoint_c542ccd5-2a31-4be8-bda9-bc87d6359200",
+        "query_parameters": {
+            "q": {
+                "type": "String",
+                "description": "Search query or keyword.",
+                "required": true
+            },
+            "country": {
+                "type": "String",
+                "description": "Country code of the region/country to return results for.",
+                "default": "us",
+                "required": false,
+                "allowed_values": [
+                    "us",
+                    "gb",
+                    "ca",
+                    "de",
+                    "fr"
+                ]
+            },
+            "language": {
+                "type": "String",
+                "description": "Language of the results.",
+                "default": "en",
+                "required": false,
+                "allowed_values": [
+                    "en",
+                    "fr",
+                    "de",
+                    "es",
+                    "it"
+                ]
+            },
+            "page": {
+                "type": "Number",
+                "description": "Results page to return.",
+                "default": 1,
+                "required": false,
+                "allowed_values": "1-100"
+            },
+            "limit": {
+                "type": "Number",
+                "description": "Maximum number of products to return.",
+                "default": 30,
+                "required": false,
+                "allowed_values": "1-100"
+            },
+            "sort_by": {
+                "type": "Enum",
+                "description": "Sort product offers by best match, top rated, lowest price, or highest price.",
+                "required": false,
+                "default": "BEST_MATCH",
+                "allowed_values": [
+                    "BEST_MATCH",
+                    "TOP_RATED",
+                    "LOWEST_PRICE",
+                    "HIGHEST_PRICE"
+                ]
+            },
+            "min_price": {
+                "type": "Number",
+                "required": false,
+                "description": "Minimum price filter for product offers."
+            },
+            "max_price": {
+                "type": "Number",
+                "required": false,
+                "description": "Maximum price filter for product offers."
+            },
+            "product_condition": {
+                "type": "Enum",
+                "description": "Filter products by condition (ANY, NEW, USED, REFURBISHED).",
+                "required": false,
+                "default": "ANY",
+                "allowed_values": [
+                    "ANY",
+                    "NEW",
+                    "USED",
+                    "REFURBISHED"
+                ]
+            },
+            "free_returns": {
+                "type": "Boolean",
+                "description": "Filter product offers that offer free returns.",
+                "required": false,
+                "default": false
+            },
+            "free_shipping": {
+                "type": "Boolean",
+                "description": "Filter product offers that offer free shipping/delivery.",
+                "required": false,
+                "default": false
+            },
+            "max_shipping_days": {
+                "type": "Number",
+                "description": "Maximum shipping days filter for product offers.",
+                "required": false
+            },
+            "on_sale": {
+                "type": "Boolean",
+                "description": "Filter product offers that are currently on sale.",
+                "required": false,
+                "default": false
+            },
+            "store_id": {
+                "type": "String",
+                "description": "Filter product offers from specific stores (comma-separated list of store IDs).",
+                "required": false
+            },
+            "other_filters": {
+                "type": "String",
+                "description": "Other dynamic filters (e.g., by Size, Color) separated by commas.",
+                "required": false
+            },
+            "min_rating": {
+                "type": "Enum",
+                "description": "Filter products by minimum rating.",
+                "required": false,
+                "default": "ANY",
+                "allowed_values": [
+                    "ANY",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            }
+        }
+    },
+    {
+        "name": "WeatherAPI.com_Realtime_Weather_Api",
+        "description": "Fetch real-time weather information based on various query parameters.",
+        "method": "GET",
+        "endpoint": "/current.json",
+        "host": "weatherapi-com.p.rapidapi.com",
+        "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_bef542ef-a177-4633-aacc-ee9703945037",
+        "query_parameters": {
+            "q": {
+                "type": "String",
+                "description": "Query parameter based on which data is sent back. It could be one of the following: Latitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508, city name e.g.: q=Paris, US zip e.g: q=10001, UK postcode e.g: q=SW1, Canada postal code e.g: q=G2J, metar:<metar_code> e.g: q=metar:EGLL, iata:<3 digit airport code> e.g: q=iata:DXB, auto:ip for IP lookup, IP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
+                "required": true
+            },
+            "days": {
+                "type": "Number",
+                "description": "Number of days of forecast required (optional)",
+                "required": false
+            },
+            "lang": {
+                "type": "String",
+                "description": "Returns 'condition:text' field in API in the desired language (optional)",
+                "required": false
+            },
+            "dt": {
+                "type": "Date (yyyy-mm-dd)",
+                "description": "Specific date for the forecast (optional). It should be between today and the next 10 days in yyyy-MM-dd format.",
+                "required": false
+            },
+            "hour": {
+                "type": "Number",
+                "description": "Restricting forecast or history output to a specific hour in a given day. (optional). Must be in 24 hour.",
+                "required": false
+            },
+            "aqi": {
+                "type": "String",
+                "description": "Enable/Disable Air Quality data in forecast API output: aqi=yes or aqi=no",
+                "required": false
+            },
+            "tides": {
+                "type": "String",
+                "description": "Enable/Disable Tide data in Marine API output: tides=yes or tides=no",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "WeatherAPI.com_Time_Zone_API",
+        "description": "Fetch time zone information based on various query parameters.",
+        "method": "GET",
+        "endpoint": "/timezone.json",
+        "host": "weatherapi-com.p.rapidapi.com",
+        "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_e163d1c6-f2e1-4809-b433-4438da245f5e",
+        "query_parameters": {
+            "q": {
+                "type": "String",
+                "description": "Query parameter based on which data is sent back. It could be one of the following: Latitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508, city name e.g.: q=Paris, US zip e.g: q=10001, UK postcode e.g: q=SW1, Canada postal code e.g: q=G2J, metar:<metar_code> e.g: q=metar:EGLL, iata:<3 digit airport code> e.g: q=iata:DXB, auto:ip for IP lookup, IP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
+                "required": true
+            },
+            "days": {
+                "type": "Number",
+                "description": "Number of days of forecast required (optional)",
+                "required": false
+            },
+            "lang": {
+                "type": "String",
+                "description": "Returns 'condition:text' field in API in the desired language (optional)",
+                "required": false
+            },
+            "dt": {
+                "type": "Date (yyyy-mm-dd)",
+                "description": "Specific date for the forecast (optional). It should be between today and the next 10 days in yyyy-MM-dd format.",
+                "required": false
+            },
+            "hour": {
+                "type": "Number",
+                "description": "Restricting forecast or history output to a specific hour in a given day. (optional). Must be in 24 hour.",
+                "required": false
+            },
+            "aqi": {
+                "type": "String",
+                "description": "Enable/Disable Air Quality data in forecast API output: aqi=yes or aqi=no",
+                "required": false
+            },
+            "tides": {
+                "type": "String",
+                "description": "Enable/Disable Tide data in Marine API output: tides=yes or tides=no",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Tripadvisor_Get_Restaurant_Details",
+        "description": "Retrieve details of a restaurant using its restaurantsId and optionally specify currencyCode.",
+        "method": "GET",
+        "endpoint": "/api/v1/restaurant/getRestaurantDetailsV2",
+        "host": "tripadvisor16.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataCrawler/api/tripadvisor16/playground/apiendpoint_ab413135-dbc1-41b2-95ab-2470fed079c1",
+        "query_parameters": {
+            "restaurantsId": {
+                "type": "String",
+                "description": "restaurantsId obtained from Tripadvisor's Search Restaurants API.",
+                "required": true
+            },
+            "currencyCode": {
+                "type": "String",
+                "description": "Currency code obtained from Get Currency API in Configs collection.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Spotify_Scraper_List_Artist_Albums_Singles",
+        "description": "Retrieve albums or singles released by an artist on Spotify.",
+        "method": "GET",
+        "endpoint": "/v1/artist/albums",
+        "host": "spotify-scraper.p.rapidapi.com",
+        "url": "https://rapidapi.com/DataFanatic/api/spotify-scraper/playground/apiendpoint_768e91c5-7f09-4321-84b4-29ddef6c931f",
+        "query_parameters": {
+            "artistId": {
+                "type": "String",
+                "description": "Unique Spotify ID of the artist for which to retrieve albums or singles.",
+                "required": true
+            },
+            "type": {
+                "type": "Enum",
+                "description": "Type of release to retrieve. Defaults to 'album'. Use 'album' or 'single'. Note: 'appearsOn' type does not support pagination scraping.",
+                "required": false
+            },
+            "offset": {
+                "type": "Number",
+                "description": "Number of items to omit before returning results. Ignored if type is 'appearsOn'. Defaults to 0.",
+                "required": false
+            },
+            "limit": {
+                "type": "Number",
+                "description": "Max number of items to return per request. Ignored if type is 'appearsOn'. Defaults to 50.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Instagram_Info",
+        "description": "Retrieve detailed information about an Instagram account, including contacts and account details.",
+        "method": "GET",
+        "endpoint": "/v1/info",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_59cb4f4c-55c0-41b5-807d-e39967e66c1d",
+        "query_parameters": {
+            "username_or_id_or_url": {
+                "type": "String",
+                "required": true,
+                "description": "Insert a username (e.g., mrbeast), user ID (e.g., 2278169415), or URL (e.g., instagram.com/mrbeast)."
+            },
+            "include_about": {
+                "type": "Boolean",
+                "required": false,
+                "description": "Include 'About this account' information: country and date_joined (in about field). Default: false. Enabling this will cost one extra request."
+            },
+            "url_embed_safe": {
+                "type": "Boolean",
+                "required": false,
+                "description": "If you need to embed images/videos on your website, set to 'true' to evade CORS restrictions. URLs are valid from 6 to 24 hours. Default: false."
+            }
+        }
+    },
+    {
+        "name": "Instagram_Followers",
+        "description": "Retrieve the list of followers for an Instagram account.",
+        "method": "GET",
+        "endpoint": "/v1/followers",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_4f4c3199-f234-4978-8d94-ae3ca22aa64e",
+        "query_parameters": {
+            "username_or_id_or_url": {
+                "type": "String",
+                "description": "Insert a username (e.g. mrbeast), user id (e.g. 2278169415) or URL (e.g. instagram.com/mrbeast).",
+                "required": true
+            },
+            "amount": {
+                "type": "Number",
+                "description": "Minimum number of followers to retrieve. Maximum: 1000. Default: 50. Note: costs one extra request for every 50 users requested (e.g. amount=100 costs 2 requests).",
+                "required": false
+            },
+            "pagination_token": {
+                "type": "String",
+                "description": "Use the value from the previous request to retrieve the continuation of the list. Leave empty in the first request. For more help, check our tutorials.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Instagram_Following",
+        "description": "Retrieve the list of accounts followed by an Instagram user.",
+        "method": "GET",
+        "endpoint": "/v1/following",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_8d0da7e2-4689-4cdb-8182-1bd4650849ad",
+        "query_parameters": {
+            "username_or_id_or_url": {
+                "type": "String",
+                "description": "Insert a username (e.g. mrbeast), user id (e.g. 2278169415) or URL (e.g. instagram.com/mrbeast).",
+                "required": true
+            },
+            "amount": {
+                "type": "Number",
+                "description": "Minimum number of accounts to retrieve. Maximum: 1000. Default: 50. Note: costs one extra request for every 50 users requested (e.g. amount=100 costs 2 requests).",
+                "required": false
+            },
+            "pagination_token": {
+                "type": "String",
+                "description": "Use the value from the previous request to retrieve the continuation of the list. Leave empty in the first request. For more help, check our tutorials.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Instagram_Posts_Reels",
+        "description": "Retrieve the list of posts and reels for an Instagram user.",
+        "method": "GET",
+        "endpoint": "/v1.2/posts",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_b1301387-dc09-4b1f-ba39-b7b51d186b40",
+        "query_parameters": {
+            "username_or_id_or_url": {
+                "type": "String",
+                "description": "Insert a username (e.g. mrbeast), user id (e.g. 2278169415) or URL (e.g. instagram.com/mrbeast).",
+                "required": true
+            },
+            "pagination_token": {
+                "type": "String",
+                "description": "Use the value from the previous request to retrieve the continuation of the list. Leave empty in the first request. For more help, check our tutorials.",
+                "required": false
+            },
+            "url_embed_safe": {
+                "type": "Boolean",
+                "description": "If you need to embed images/videos on your website, set to 'true' to evade CORS restrictions. URLs are valid from 6 to 24 hours. Default: false.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "Instagram_Search_User",
+        "description": "Retrieve the list of accounts with the user name on Instagram.",
+        "method": "GET",
+        "endpoint": "/v1/search_users",
+        "host": "instagram-scraper-api2.p.rapidapi.com",
+        "url": "https://rapidapi.com/social-api1-instagram/api/instagram-scraper-api2/playground/apiendpoint_dcdb7a36-a7ed-4501-a65b-3200093e1135",
+        "query_parameters": {
+            "search_query": {
+                "type": "String",
+                "description": "Insert the name of an Instagram user.",
+                "required": true
+            },
+            "url_embed_safe": {
+                "type": "Boolean",
+                "description": "If you need to embed images/videos on your website, set to 'true' to evade CORS restrictions.",
+                "required": false
+            }
+        }
+    },
+    {
+        "name": "SEC_Balance_Sheet",
+        "description": "Retrieve the balance sheet of a publicly traded company from SEC filings.",
+        "method": "GET",
+        "endpoint": "/v1/company/balancesheet",
+        "host": "last10k-company-v1.p.rapidapi.com",
+        "url": "https://rapidapi.com/last10k/api/sec-filings/playground/5920a047e4b00fa921e13cec",
+        "query_parameters": {
+            "ticker": {
+                "type": "String",
+                "description": "Publicly traded company's stock symbol",
+                "required": true
+            },
+            "formtype": {
+                "type": "String",
+                "description": "10-K = Annual Report (default) | 10-Q = Quarterly Report",
+                "required": false
+            },
+            "filingorder": {
+                "type": "Number",
+                "description": "Retrieve an older financial statement by specifying number of filings to go back. By default, the most recent filing is returned (filingOrder = 0).",
+                "required": false
+            }
+        }
+    }
+]
