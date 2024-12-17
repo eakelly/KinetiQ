@@ -9,98 +9,30 @@
         "86.0"
     ],
     [
-        "accuracy",
-        "0",
-        "2",
-        "0",
-        "2",
-        "accuracy",
-        "accuracy",
         "100"
     ],
     [
-        "accuracy",
-        "1",
-        "5",
-        "1",
-        "5",
-        "accuracy",
-        "accuracy",
-        "accuracy",
-        "accuracy",
-        "accuracy",
         "80.0"
     ],
     [
-        "accuracy",
-        "4",
-        "6",
-        "0",
-        "6",
-        "accuracy",
-        "accuracy",
-        "accuracy",
-        "accuracy",
         "53.33"
     ],
     [
-        "accuracy",
-        "0",
-        "3",
-        "2",
-        "3",
-        "accuracy",
-        "accuracy",
         "80.0"
     ],
     [
-        "accuracy",
-        "0",
-        "3",
-        "3",
-        "3",
-        "accuracy",
-        "accuracy",
         "70.0"
     ],
     [
-        "accuracy",
-        "1",
-        "2",
-        "0",
-        "2",
-        "accuracy",
-        "accuracy",
-        "accuracy",
-        "accuracy",
         "65.0"
     ],
     [
-        "'numbers': '1.7777, -, 2.9057345', 'decimalPlaces': '5'",
-        "\"numbers\": \"1.7777,-2.9057345\", \"decimalPlaces\": \"5\"",
-        "accuracy",
-        "0",
-        "2",
-        "0",
-        "2",
-        "100",
         "100"
     ],
     [
-        "'q': 'Tamagotchi', 'country': 'UK', 'product_condition': 'NEW', 'on_sale': True",
-        "\"q\": \"Tamagotchi\", \"country\": \"UK\", \"product_condition\": \"new\", \"on_sale\": \"true\"",
-        "accuracy",
         "85.0"
     ],
     [
-        "'q': 'Tamagotchi', 'max_price': '20', 'product_condition': 'NEW'",
-        "'q': 'Tamagotchi', 'max_price': '20', 'product_condition': 'new'",
-        "accuracy",
-        "0",
-        "3",
-        "0",
-        "3",
-        "accuracy",
         "100"
     ],
     [
@@ -110,16 +42,6 @@
         "100"
     ],
     [
-        "accuracy",
-        "1",
-        "3",
-        "1",
-        "3",
-        "accuracy",
-        "accuracy",
-        "accuracy",
-        "accuracy",
-        "accuracy",
         "66.67"
     ],
     [
@@ -132,12 +54,6 @@
         "100"
     ],
     [
-        "accuracy",
-        "1",
-        "2",
-        "0",
-        "2",
-        "accuracy",
         "65.0"
     ],
     [
@@ -153,20 +69,9 @@
         "100"
     ],
     [
-        "accuracy",
-        "1",
-        "2",
-        "0",
-        "2",
-        "accuracy",
-        "accuracy",
-        "accuracy",
-        "accuracy",
         "65.0"
     ],
     [
-        "'ticker': 'msft', 'formtype': '10-q', 'filingorder': '10'",
-        "\"ticker\": \"MSFT\", \"formtype\": \"10-Q\", \"filingorder\": \"10\"",
         "100"
     ]
 ]

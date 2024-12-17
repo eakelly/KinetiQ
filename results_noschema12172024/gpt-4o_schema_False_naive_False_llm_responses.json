@@ -1,0 +1,62 @@
+[
+    {
+        "q": "London",
+        "days": "1",
+        "aqi": "yes"
+    },
+    {
+        "origin": "NYC",
+        "destination": "STO",
+        "date": "2023-10-03",
+        "adults": "2",
+        "currency": "USD",
+        "sort": "price"
+    },
+    {
+        "origin": "NYC",
+        "destination": "STO",
+        "adults": "2",
+        "infants": "1"
+    },
+    {
+        "origin": "NYC",
+        "language": "es"
+    },
+    "{\"location\": \"New York City\", \"checkIn\": \"2023-10-06\", \"checkOut\": \"2023-10-13\", \"adults\": \"2\"}",
+    "{\"location\": \"New York City\", \"checkin\": \"2023-11-16\", \"checkout\": \"2023-11-20\", \"rooms\": \"2\", \"adults\": \"2\"}",
+    "{\"query\": \"climate change\", \"country\": \"Ireland\"}",
+    "{\"query\": \"hotel\", \"location\": \"Boston\", \"status\": \"closed\"}",
+    "{\"country\": \"IE\"}",
+    "{\"expression\": \"1.7777 - 2.9057345\", \"precision\": \"5\"}",
+    {
+        "query": "Tamagotchi",
+        "country": "UK",
+        "condition": "new",
+        "sale": "true"
+    },
+    "{\"query\": \"Tamagotchi\", \"price_max\": \"20\", \"condition\": \"new\"}",
+    "{\"product_id\": \"11577822456427762145\", \"country\": \"US\", \"language\": \"es\"}",
+    {
+        "productId": "11577822456427762145",
+        "country": "US",
+        "language": "es"
+    },
+    "{\"product_id\": \"11577822456427762145\", \"country\": \"KR\", \"language\": \"en\"}",
+    "{\"q\": \"Paris\"}",
+    {
+        "locationId": "12425739",
+        "currency": "SEK"
+    },
+    "{\"id\": \"2uFUBdaVGtyMqckSeCl0Qj\"}",
+    "{\"id\": \"2uFUBdaVGtyMqckSeCl0Qj\"}",
+    "{\"username\": \"createdfromthestars\"}",
+    "{\"username\": \"createdfromthestars\", \"max_results\": \"20\"}",
+    "{\"username\": \"createdfromthestars\", \"limit\": \"20\"}",
+    "{\"username\": \"kiyomi_bori\"}",
+    "{\"username\": \"kiyomi_bori\"}",
+    {
+        "symbol": "MSFT",
+        "reporttype": "Q",
+        "limit": "10"
+    }
+]
