@@ -1,0 +1,571 @@
+llm_type,query_type,query,spec_type,generated_params,ground_truth,precision,recall,hallucination_count,eval_times
+gpt-3.5,explicit,"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",full,"{
+  ""q"": ""London"",
+  ""days"": ""1"",
+  ""aqi"": ""yes""
+}","{'q': 'London', 'days': '1', 'aqi': 'yes'}",1.0,,0,1.2082092761993408
+gpt-3.5,ambiguous,"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",full,"{
+    ""q"": ""London"",
+    ""aqi"": ""yes""
+}","{'q': 'London', 'days': '1', 'aqi': 'yes'}",0.6666666666666666,,0,0.5491669178009033
+gpt-3.5,vague,Is it a good idea to go out in London today?,full,"{
+    ""q"": ""London"",
+    ""dt"": ""2023-10-18""
+}","{'q': 'London', 'days': '1', 'aqi': 'yes'}",0.3333333333333333,,0,0.6254363059997559
+gpt-3.5,explicit,Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.,full,"{
+  ""fromId"": ""JFK.AIRPORT"",
+  ""toId"": ""ICN.AIRPORT"",
+  ""departDate"": ""2022-10-21"",
+  ""adults"": ""2"",
+  ""cabinClass"": ""ECONOMY""
+}","{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",1.0,,0,0.8236322402954102
+gpt-3.5,ambiguous,I need an affordable flight for today's date from JFK airport to Seoul for my husband and I,full,"{
+  ""fromId"": ""JFK.AIRPORT"",
+  ""toId"": ""ICN.AIRPORT"",
+  ""departDate"": ""2022-01-20"",
+  ""adults"": ""2""
+}","{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",0.8,,0,0.764333963394165
+gpt-3.5,vague,Can I get a good flight deal from New York to South Korea today?,full,"{
+    ""fromId"": ""JFK.AIRPORT"",
+    ""toId"": ""ICN.AIRPORT"",
+    ""departDate"": ""2022-10-28""
+}","{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",0.6,,0,1.5865356922149658
+gpt-3.5,explicit,Find a flight from New York City (NYC) to Seoul (ICN) for two adults and one infant,full,"{
+    ""originSkyId"": ""NYC"",
+    ""destinationSkyId"": ""ICN"",
+    ""originEntityId"": ""NYCA-sky"",
+    ""destinationEntityId"": ""ICN-sky"",
+    ""date"": ""2022-12-25"",
+    ""adults"": ""2"",
+    ""children"": ""0"",
+    ""infants"": ""1""
+}","{'originSkyId': 'NYC', 'destinationSkyId': 'STO', 'adults': '2', 'infants': '1'}",1.0,,0,1.3885767459869385
+gpt-3.5,ambiguous,"My wife, newborn, and I need to visit her parents in Seoul. We're leaving from NYC.",full,"{
+    ""originSkyId"": ""NYC"",
+    ""destinationSkyId"": ""SEL"",
+    ""originEntityId"": ""NYCA-sky"",
+    ""destinationEntityId"": ""SEL-sky"",
+    ""date"": ""2023-01-15"",
+    ""adults"": ""2"",
+    ""children"": ""1"",
+    ""infants"": ""1"",
+    ""cabinClass"": ""economy"",
+    ""sortBy"": ""best"",
+    ""currency"": ""USD"",
+    ""market"": ""en-US"",
+    ""countryCode"": ""US""
+}","{'originSkyId': 'NYC', 'destinationSkyId': 'STO', 'adults': '2', 'infants': '1'}",1.0,,0,1.3482539653778076
+gpt-3.5,vague,Looking for a way to get my family to Seoul.,full,"{
+    ""originSkyId"": ""originSkyId_value"",
+    ""destinationSkyId"": ""destinationSkyId_value"",
+    ""originEntityId"": ""originEntityId_value"",
+    ""destinationEntityId"": ""destinationEntityId_value"",
+    ""date"": ""YYYY-MM-DD"",
+    ""destination"": ""Seoul"",
+    ""adults"": ""1"",
+    ""children"": ""0"",
+    ""infants"": ""0"",
+    ""sortBy"": ""best"",
+    ""currency"": ""USD"",
+    ""market"": ""en-US"",
+    ""countryCode"": ""US""
+}","{'originSkyId': 'NYC', 'destinationSkyId': 'STO', 'adults': '2', 'infants': '1'}",1.0,,1,1.2616918087005615
+gpt-3.5,explicit,Find airports in New York City (NYC) that offer flights. Display the results in Spanish (Mexico locale).,full,"{
+    ""query"": ""New York City"",
+    ""locale"": ""es_MX""
+}","{'query': 'NYC', 'locale': 'es-MX'}",1.0,,0,0.6012277603149414
+gpt-3.5,ambiguous,"I need flights from NYC but I can't understand English, I speak Spanish.",full,"{
+    ""query"": ""NYC"",
+    ""locale"": ""spanish""
+}","{'query': 'NYC', 'locale': 'es-MX'}",1.0,,0,0.528151273727417
+gpt-3.5,vague,Help me find flights from NYC in a language I understand.,full,"{
+    ""query"": ""NYC"",
+    ""locale"": ""en""
+}","{'query': 'NYC', 'locale': 'es-MX'}",1.0,,0,0.5540058612823486
+gpt-3.5,explicit,"Find a hotel in New York City (NYC) for two adults, checking in today and checking out next Friday. Display prices in USD.",full,"{
+    ""geoId"": ""28914"",
+    ""checkIn"": ""2022-02-22"",
+    ""checkOut"": ""2022-02-25"",
+    ""adults"": ""2"",
+    ""currencyCode"": ""USD""
+}","{'geoId': 'NYC', 'checkIn': '2024-12-16', 'checkOut': '2024-12-20', 'adults': '2', 'currencyCode': 'USD'}",1.0,,0,0.7938380241394043
+gpt-3.5,ambiguous,I need a hotel for my husband and I in NYC. We'll be staying from today until next Friday.,full,"{
+    ""geoId"": ""60763"",
+    ""checkIn"": ""2022-10-17"",
+    ""checkOut"": ""2022-10-21"",
+    ""adults"": ""2""
+}","{'geoId': 'NYC', 'checkIn': '2024-12-16', 'checkOut': '2024-12-20', 'adults': '2', 'currencyCode': 'USD'}",0.8,,0,0.881706714630127
+gpt-3.5,vague,We need a hotel in New York for a few days.,full,"{
+  ""geoId"": ""60763"",
+  ""checkIn"": ""2023-01-15"",
+  ""checkOut"": ""2023-01-20""
+}","{'geoId': 'NYC', 'checkIn': '2024-12-16', 'checkOut': '2024-12-20', 'adults': '2', 'currencyCode': 'USD'}",0.6,,0,0.7143847942352295
+gpt-3.5,explicit,"Find a hotel in New York City (NYC). We need 2 rooms, each for one adult, who will be checking in on December 16 and checking out on December 20. Display prices in USD.",full,"{
+    ""geoId"": ""60763"",
+    ""checkIn"": ""2022-12-16"",
+    ""checkOut"": ""2022-12-20"",
+    ""pageNumber"": ""1"",
+    ""adults"": ""1"",
+    ""rooms"": ""2"",
+    ""currencyCode"": ""USD""
+}","{'geoId': 'NYC', 'checkIn': '2024-12-16', 'checkOut': '2024-12-20', 'adults': '2', 'rooms': '2', 'currencyCode': 'USD'}",1.0,,0,0.9225537776947021
+gpt-3.5,ambiguous,My coworker and I need a separate room for our business trip. We'll be in NYC from the 16th to the 20th.,full,"{
+    ""geoId"": ""60763"",
+    ""checkIn"": ""2023-01-16"",
+    ""checkOut"": ""2023-01-20"",
+    ""rooms"": ""1""
+}","{'geoId': 'NYC', 'checkIn': '2024-12-16', 'checkOut': '2024-12-20', 'adults': '2', 'rooms': '2', 'currencyCode': 'USD'}",0.6666666666666666,,0,2.665764331817627
+gpt-3.5,vague,We're looking for a place to stay in NYC for a work trip.,full,"{
+    ""geoId"": ""60763"",
+    ""checkIn"": ""2022-10-10"",
+    ""checkOut"": ""2022-10-15""
+}","{'geoId': 'NYC', 'checkIn': '2024-12-16', 'checkOut': '2024-12-20', 'adults': '2', 'rooms': '2', 'currencyCode': 'USD'}",0.5,,0,0.8487706184387207
+gpt-3.5,explicit,Find news articles about climate change specifically in Ireland.,full,"{
+    ""query"": ""climate change"",
+    ""language"": ""en"",
+    ""region"": ""IE""
+}","{'query': 'Climate Change', 'language': '', 'region': 'IE'}",1.0,,0,0.6658074855804443
+gpt-3.5,ambiguous,I've heard about climate issues in Ireland. Any recent news?,full,"{
+    ""query"": ""climate issues in Ireland"",
+    ""language"": ""en""
+}","{'query': 'Climate Change', 'language': '', 'region': 'IE'}",0.6666666666666666,,0,0.7223672866821289
+gpt-3.5,vague,What’s happening to Ireland?,full,"{
+    ""query"": ""What’s happening to Ireland?"",
+    ""language"": ""en""
+}","{'query': 'Climate Change', 'language': '', 'region': 'IE'}",0.6666666666666666,,0,0.6307253837585449
+gpt-3.5,explicit,"Find hotels that have closed down in Boston, USA, and provide their names and contact email addresses.",full,"{
+    ""query"": ""hotels closed down"",
+    ""limit"": ""500"",
+    ""lat"": """",
+    ""lng"": """",
+    ""zoom"": ""13"",
+    ""language"": ""en"",
+    ""region"": ""US"",
+    ""verified"": """",
+    ""business_status"": ""CLOSED"",
+    ""extract_emails_and_contacts"": ""True"",
+    ""fields"": ""name,email""
+}","{'query': 'Hotels in Boston, USA', 'business_status': 'CLOSED', 'extract_emails_and_contacts': True}",1.0,,0,1.9828698635101318
+gpt-3.5,ambiguous,"I need to find the contact info of the hotel I stayed at in Boston, but I think it's closed down now.",full,"{
+    ""query"": ""hotel in Boston closed down"",
+    ""business_status"": ""CLOSED"",
+    ""extract_emails_and_contacts"": ""True"",
+    ""fields"": ""business_id,type,phone_number,full_address""
+}","{'query': 'Hotels in Boston, USA', 'business_status': 'CLOSED', 'extract_emails_and_contacts': True}",1.0,,0,1.1737656593322754
+gpt-3.5,vague,Need info on a hotel in Boston that might not be open.,full,"{
+    ""query"": ""hotel in Boston not open"",
+    ""limit"": ""20"",
+    ""language"": ""en"",
+    ""region"": ""us"",
+    ""business_status"": ""CLOSED""
+}","{'query': 'Hotels in Boston, USA', 'business_status': 'CLOSED', 'extract_emails_and_contacts': True}",0.6666666666666666,,0,0.8285422325134277
+gpt-3.5,explicit,"Retrieve reviews for this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76, specifically for its location in Ireland.",full,"{
+    ""business_id"": ""0x89c259b5a9bd152b:0x31453e62a3be9f76"",
+    ""region"": ""Ireland""
+}","{'business_id': '0x89c259b5a9bd152b:0x31453e62a3be9f76', 'region': 'ie'}",1.0,,0,0.7875592708587646
+gpt-3.5,ambiguous,I need to see what people are saying about this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76 in Ireland.,full,"{
+    ""business_id"": ""0x89c259b5a9bd152b:0x31453e62a3be9f76"",
+    ""region"": ""Ireland"",
+    ""language"": ""en""
+}","{'business_id': '0x89c259b5a9bd152b:0x31453e62a3be9f76', 'region': 'ie'}",1.0,,0,0.7803277969360352
+gpt-3.5,vague,What's going on with this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76 in Ireland?,full,"{
+    ""business_id"": ""0x89c259b5a9bd152b:0x31453e62a3be9f76"",
+    ""region"": ""Ireland""
+}","{'business_id': '0x89c259b5a9bd152b:0x31453e62a3be9f76', 'region': 'ie'}",1.0,,0,0.8079276084899902
+gpt-3.5,explicit,Calculate 1.7777 minus 2.9057345 and round the result to five decimal places.,full,"{
+    ""numbers"": ""1.7777-2.9057345"",
+    ""decimalPlaces"": ""5""
+}","{'numbers': '1.7777, -, 2.9057345', 'decimalPlaces': '5'}",1.0,,0,0.6854946613311768
+gpt-3.5,ambiguous,What’s 1.7777 - 2.9057345 rounded to five decimals?,full,"{
+    ""numbers"": ""1.7777 - 2.9057345"",
+    ""decimalPlaces"": ""5""
+}","{'numbers': '1.7777, -, 2.9057345', 'decimalPlaces': '5'}",1.0,,0,0.6941921710968018
+gpt-3.5,vague,Solve 1.7777 - 2.9057345 with rounding.,full,"{
+    ""numbers"": ""1.7777 - 2.9057345"",
+    ""decimalPlaces"": ""2""
+}","{'numbers': '1.7777, -, 2.9057345', 'decimalPlaces': '5'}",1.0,,0,0.692518949508667
+gpt-3.5,explicit,Search for Tamagotchi toy in new condition that are on sale in the UK.,full,"{
+    ""q"": ""Tamagotchi toy"",
+    ""country"": ""gb"",
+    ""product_condition"": ""NEW"",
+    ""on_sale"": ""True""
+}","{'q': 'Tamagotchi', 'country': 'UK', 'product_condition': 'NEW', 'on_sale': True}",1.0,,0,0.7774560451507568
+gpt-3.5,ambiguous,I want to buy a brand new Tamagotchi for my niece. Are there any on sale in the UK?,full,"{
+    ""q"": ""Tamagotchi"",
+    ""country"": ""gb"",
+    ""product_condition"": ""NEW"",
+    ""on_sale"": ""True""
+}","{'q': 'Tamagotchi', 'country': 'UK', 'product_condition': 'NEW', 'on_sale': True}",1.0,,0,1.6959507465362549
+gpt-3.5,vague,I’m looking for a Tamagotchi in the UK.,full,"{
+    ""q"": ""Tamagotchi"",
+    ""country"": ""gb"",
+    ""language"": ""en""
+}","{'q': 'Tamagotchi', 'country': 'UK', 'product_condition': 'NEW', 'on_sale': True}",0.5,,0,0.5786716938018799
+gpt-3.5,explicit,Search for new Tamagotchi toy under $20.,full,"{
+    ""q"": ""new Tamagotchi toy"",
+    ""max_price"": ""20"",
+    ""product_condition"": ""NEW""
+}","{'q': 'Tamagotchi', 'max_price': '20', 'product_condition': 'NEW'}",1.0,,0,0.9099781513214111
+gpt-3.5,ambiguous,"I want to buy a brand new Tamagotchi for my son, but my budget is $20.",full,"{
+    ""q"": ""Tamagotchi"",
+    ""country"": ""us"",
+    ""language"": ""en"",
+    ""min_price"": ""1"",
+    ""max_price"": ""20"",
+    ""product_condition"": ""NEW""
+}","{'q': 'Tamagotchi', 'max_price': '20', 'product_condition': 'NEW'}",1.0,,0,0.7338352203369141
+gpt-3.5,vague,I need a Tamagotchi for my son that is not too expensive.,full,"{
+    ""q"": ""Tamagotchi for my son"",
+    ""max_price"": ""50"",
+    ""sort_by"": ""LOWEST_PRICE"",
+    ""product_condition"": ""NEW""
+}","{'q': 'Tamagotchi', 'max_price': '20', 'product_condition': 'NEW'}",1.0,,0,1.1589927673339844
+gpt-3.5,explicit,Give me product reviews for product with ID=11577822456427762145 in the United States and translate the results to Spanish.,full,"{
+    ""product_id"": ""11577822456427762145"",
+    ""country"": ""us"",
+    ""language"": ""es""
+}","{'product_id': '11577822456427762145', 'country': 'us', 'language': 'es'}",1.0,,0,0.8549327850341797
+gpt-3.5,ambiguous,"Show me reviews for this productwith ID=11577822456427762145, but I speak Spanish.",full,"{
+    ""product_id"": ""11577822456427762145"",
+    ""language"": ""es""
+}","{'product_id': '11577822456427762145', 'country': 'us', 'language': 'es'}",0.6666666666666666,,0,0.8467764854431152
+gpt-3.5,vague,Que piensa la gente sobre este producto con ID=11577822456427762145?,full,"{
+    ""product_id"": ""11577822456427762145""
+}","{'product_id': '11577822456427762145', 'country': 'us', 'language': 'es'}",0.3333333333333333,,0,0.633882999420166
+gpt-3.5,explicit,Find product offers for product with ID=11577822456427762145 in the United States and translate the results to Spanish.,full,"{
+    ""product_id"": ""11577822456427762145"",
+    ""country"": ""us"",
+    ""language"": ""es""
+}","{'product_id': '11577822456427762145', 'country': 'us', 'language': 'es'}",1.0,,0,0.6523010730743408
+gpt-3.5,ambiguous,I'm looking for offers on product with ID=11577822456427762145. I'm from the US but want to send the offers to my mom who speaks Spanish.,full,"{
+    ""product_id"": ""11577822456427762145"",
+    ""page"": ""1"",
+    ""country"": ""es"",
+    ""language"": ""es""
+}","{'product_id': '11577822456427762145', 'country': 'us', 'language': 'es'}",1.0,,0,0.7837550640106201
+gpt-3.5,vague,Show me the best deals for this product with ID=11577822456427762145 but I can't speak English.,full,"{
+    ""product_id"": ""11577822456427762145"",
+    ""page"": ""1"",
+    ""country"": ""us"",
+    ""language"": ""not_en""
+}","{'product_id': '11577822456427762145', 'country': 'us', 'language': 'es'}",1.0,,0,0.763155460357666
+gpt-3.5,explicit,"Provide details for product with ID=11577822456427762145 available in Korea, and translate the results to English.",full,"{
+    ""q"": ""11577822456427762145"",
+    ""country"": ""kr"",
+    ""language"": ""en""
+}","{'product_id': '11577822456427762145', 'country': 'kr', 'language': 'en'}",0.6666666666666666,,0,0.6498105525970459
+gpt-3.5,ambiguous,Can you tell me about product ID=11577822456427762145 available in Korea? I can only speak English though.,full,"{
+    ""q"": ""11577822456427762145"",
+    ""country"": ""kr"",
+    ""language"": ""en""
+}","{'product_id': '11577822456427762145', 'country': 'kr', 'language': 'en'}",0.6666666666666666,,0,0.7364771366119385
+gpt-3.5,vague,I want to know more about this product with ID=11577822456427762145 in Korea.,full,"{
+  ""q"": ""11577822456427762145"",
+  ""country"": ""kr""
+}","{'product_id': '11577822456427762145', 'country': 'kr', 'language': 'en'}",0.3333333333333333,,0,0.9190452098846436
+gpt-3.5,explicit,I need the weather forecast in Paris for this week. Include information about high tides as well.,full,"{
+    ""q"": ""Paris"",
+    ""days"": ""7"",
+    ""tides"": ""yes""
+}","{'q': 'Paris', 'days': '7', 'tides': 'yes'}",1.0,,0,0.7529573440551758
+gpt-3.5,ambiguous,I'm in Paris for the week and want to visit the beach. What does the weather look like this week and should I worry about high tides?,full,"{
+    ""q"": ""Paris"",
+    ""days"": ""7"",
+    ""tides"": ""yes""
+}","{'q': 'Paris', 'days': '7', 'tides': 'yes'}",1.0,,0,0.7056708335876465
+gpt-3.5,vague,Is it a good time to go to the beach in Paris this week?,full,"{
+    ""q"": ""Paris"",
+    ""days"": ""7""
+}","{'q': 'Paris', 'days': '7', 'tides': 'yes'}",0.6666666666666666,,0,0.5703670978546143
+gpt-3.5,explicit,I’m planning to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York in NYC. Please display the prices in SEK (Swedish Krona).,full,"{
+    ""restaurantsId"": ""Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York"",
+    ""currencyCode"": ""SEK""
+}","{'restaurantsId': 'Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York', 'currencyCode': 'SEK'}",1.0,,0,0.9104366302490234
+gpt-3.5,ambiguous,I want to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York but I'm from Sweden so I don't know how much the prices are.,full,"{
+    ""restaurantsId"": ""Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York"",
+    ""currencyCode"": ""SEK""
+}","{'restaurantsId': 'Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York', 'currencyCode': 'SEK'}",1.0,,0,0.787264347076416
+gpt-3.5,vague,Give me details about Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York.,full,"{
+    ""restaurantsId"": ""Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York"",
+    ""currencyCode"": ""USD""
+}","{'restaurantsId': 'Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York', 'currencyCode': 'SEK'}",1.0,,0,0.8958616256713867
+gpt-3.5,explicit,Give me the date of when artist with ID 2uFUBdaVGtyMqckSeCl0Qj released their album Experience.,full,"{
+    ""artistId"": ""2uFUBdaVGtyMqckSeCl0Qj"",
+    ""type"": ""album""
+}","{'artistId': '2uFUBdaVGtyMqckSeCl0Qj', 'type': 'album'}",1.0,,0,0.6798579692840576
+gpt-3.5,ambiguous,When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj come out with his album Experience?,full,"{
+    ""artistId"": ""2uFUBdaVGtyMqckSeCl0Qj"",
+    ""type"": ""album""
+}","{'artistId': '2uFUBdaVGtyMqckSeCl0Qj', 'type': 'album'}",1.0,,0,0.7905457019805908
+gpt-3.5,vague,When did this artist with ID=2uFUBdaVGtyMqckSeCl0Qj release Experience?,full,"{
+    ""artistId"": ""2uFUBdaVGtyMqckSeCl0Qj"",
+    ""type"": ""album""
+}","{'artistId': '2uFUBdaVGtyMqckSeCl0Qj', 'type': 'album'}",1.0,,0,0.6651120185852051
+gpt-3.5,explicit,When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj release their single Night?,full,"{
+    ""artistId"": ""2uFUBdaVGtyMqckSeCl0Qj"",
+    ""type"": ""single""
+}","{'artistId': '2uFUBdaVGtyMqckSeCl0Qj', 'type': 'single'}",1.0,,0,0.6604835987091064
+gpt-3.5,ambiguous,When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj come out with his song Night?,full,"{
+    ""artistId"": ""2uFUBdaVGtyMqckSeCl0Qj"",
+    ""type"": ""single""
+}","{'artistId': '2uFUBdaVGtyMqckSeCl0Qj', 'type': 'single'}",1.0,,0,0.7201366424560547
+gpt-3.5,vague,When did this artist with ID=2uFUBdaVGtyMqckSeCl0Qj release Night?,full,"{
+    ""artistId"": ""2uFUBdaVGtyMqckSeCl0Qj"",
+    ""type"": ""single""
+}","{'artistId': '2uFUBdaVGtyMqckSeCl0Qj', 'type': 'single'}",1.0,,0,0.7973048686981201
+gpt-3.5,explicit,Give me the date that user sparklemilktea joined Instagram.,full,"{
+    ""username_or_id_or_url"": ""sparklemilktea"",
+    ""include_about"": ""True""
+}","{'username_or_id_or_url': 'sparklemilktea', 'include_about': 'true'}",1.0,,0,0.6461238861083984
+gpt-3.5,ambiguous,When did sparklemilktea join Instagram?,full,"{
+    ""username_or_id_or_url"": ""sparklemilktea"",
+    ""include_about"": ""True""
+}","{'username_or_id_or_url': 'sparklemilktea', 'include_about': 'true'}",1.0,,0,0.6291053295135498
+gpt-3.5,vague,When did sparklemilktea start using Instagram?,full,"{
+    ""username_or_id_or_url"": ""sparklemilktea"",
+    ""include_about"": ""True""
+}","{'username_or_id_or_url': 'sparklemilktea', 'include_about': 'true'}",1.0,,0,0.8240537643432617
+gpt-3.5,explicit,Give me at least 20 followers of the user sparklemilktea.,full,"{
+    ""username_or_id_or_url"": ""sparklemilktea"",
+    ""amount"": ""20""
+}","{'username_or_id_or_url': 'sparklemilktea', 'amount': '20'}",1.0,,0,0.5684831142425537
+gpt-3.5,ambiguous,Can you tell me the top 20 followers of sparklemilktea?,full,"{
+    ""username_or_id_or_url"": ""sparklemilktea"",
+    ""amount"": ""20""
+}","{'username_or_id_or_url': 'sparklemilktea', 'amount': '20'}",1.0,,0,0.6361865997314453
+gpt-3.5,vague,Who are some followers of sparklemilktea?,full,"{
+    ""username_or_id_or_url"": ""sparklemilktea"",
+    ""amount"": ""50"",
+    ""pagination_token"": """"
+}","{'username_or_id_or_url': 'sparklemilktea', 'amount': '20'}",1.0,,0,0.6906282901763916
+gpt-3.5,explicit,Give me at least 20 people that the user sparklemilktea follows.,full,"{
+  ""username_or_id_or_url"": ""sparklemilktea"",
+  ""amount"": ""20""
+}","{'username_or_id_or_url': 'sparklemilktea', 'amount': '20'}",1.0,,0,0.572242021560669
+gpt-3.5,ambiguous,Can you tell me the top 20 people who sparklemilktea follows?,full,"{
+    ""username_or_id_or_url"": ""sparklemilktea"",
+    ""amount"": ""20""
+}","{'username_or_id_or_url': 'sparklemilktea', 'amount': '20'}",1.0,,0,0.557037353515625
+gpt-3.5,vague,Can you list some people who sparklemilktea follows?,full,"{
+    ""username_or_id_or_url"": ""sparklemilktea"",
+    ""amount"": ""50""
+}","{'username_or_id_or_url': 'sparklemilktea', 'amount': '20'}",1.0,,0,0.7248435020446777
+gpt-3.5,explicit,Show me posts by kiyomi_bori and provide the HTML code to embed them.,full,"{
+    ""username_or_id_or_url"": ""kiyomi_bori"",
+    ""url_embed_safe"": ""True""
+}","{'username_or_id_or_url': 'kiyomi_bori', 'url_embed_safe': 'true'}",1.0,,0,0.7078113555908203
+gpt-3.5,ambiguous,Can you get posts by kiyomi_bori and make them embeddable for my website?,full,"{
+    ""username_or_id_or_url"": ""kiyomi_bori"",
+    ""url_embed_safe"": ""True""
+}","{'username_or_id_or_url': 'kiyomi_bori', 'url_embed_safe': 'true'}",1.0,,0,1.1669604778289795
+gpt-3.5,vague,I want to see posts by kiyomi_bori to put on my website.,full,"{
+    ""username_or_id_or_url"": ""kiyomi_bori"",
+    ""pagination_token"": """",
+    ""url_embed_safe"": ""True""
+}","{'username_or_id_or_url': 'kiyomi_bori', 'url_embed_safe': 'true'}",1.0,,0,0.6647543907165527
+gpt-3.5,explicit,Search for the user kiyomi_bori and provide an embeddable profile link.,full,"{
+    ""search_query"": ""kiyomi_bori"",
+    ""url_embed_safe"": ""True""
+}","{'search_query': 'kiyomi_bori', 'url_embed_safe': 'true'}",1.0,,0,0.5512404441833496
+gpt-3.5,ambiguous,Find kiyomi_bori's profile so I can embed it.,full,"{
+    ""search_query"": ""kiyomi_bori"",
+    ""url_embed_safe"": ""True""
+}","{'search_query': 'kiyomi_bori', 'url_embed_safe': 'true'}",1.0,,0,0.908116340637207
+gpt-3.5,vague,I want to see kiyomi_bori to put on my website.,full,"{
+    ""search_query"": ""kiyomi_bori"",
+    ""url_embed_safe"": ""True""
+}","{'search_query': 'kiyomi_bori', 'url_embed_safe': 'true'}",1.0,,0,0.6444201469421387
+gpt-3.5,explicit,Give me the last 10 quarterly balance sheets for MSFT from the 10-Q filings.,full,"{
+    ""ticker"": ""MSFT"",
+    ""formtype"": ""10-Q"",
+    ""filingorder"": ""10""
+}","{'ticker': 'msft', 'formtype': '10-q', 'filingorder': '10'}",1.0,,0,0.7861783504486084
+gpt-3.5,ambiguous,Show me the last 10 quarterly reports for MSFT.,full,"{
+    ""ticker"": ""MSFT"",
+    ""formtype"": ""10-Q"",
+    ""filingorder"": ""10""
+}","{'ticker': 'msft', 'formtype': '10-q', 'filingorder': '10'}",1.0,,0,0.8546261787414551
+gpt-3.5,vague,Give me MSFT’s latest financial reports.,full,"{
+    ""ticker"": ""MSFT"",
+    ""formtype"": ""10-K"",
+    ""filingorder"": ""0""
+}","{'ticker': 'msft', 'formtype': '10-q', 'filingorder': '10'}",1.0,,0,0.7660763263702393
+gpt-3.5,explicit,Search for books with the keyword 'artificial intelligence' on page 2 of the results.,full,"{
+    ""keyword"": ""artificial intelligence"",
+    ""page"": ""2""
+}","{'keyword': 'artificial intelligence', 'page': '2'}",1.0,,0,0.5343749523162842
+gpt-3.5,ambiguous,Give me lots of good books on artificial intelligence.,full,"{
+    ""keyword"": ""lots of good books on artificial intelligence."",
+    ""page"": ""1""
+}","{'keyword': 'artificial intelligence', 'page': '2'}",1.0,,0,0.6557028293609619
+gpt-3.5,vague,Any good books on AI?,full,"{
+    ""keyword"": ""Any good books on AI?""
+}","{'keyword': 'artificial intelligence', 'page': '2'}",0.5,,0,0.7747046947479248
+gpt-3.5,explicit,Find quotes containing the word 'courage' on the first page of results.,full,"{
+    ""keyword"": ""courage"",
+    ""page"": ""1""
+}",{'keyword': 'courage'},1.0,,0,0.7064290046691895
+gpt-3.5,ambiguous,Do you know any quotes about being brave?,full,"{
+    ""keyword"": ""being brave""
+}",{'keyword': 'courage'},1.0,,0,0.6110365390777588
+gpt-3.5,vague,Give me a brave quote.,full,"{
+    ""keyword"": ""brave""
+}",{'keyword': 'courage'},1.0,,0,0.47327232360839844
+gpt-3.5,explicit,Search for restaurant locations in 'San Francisco'.,full,"{
+    ""query"": ""San Francisco""
+}","{'locationId': '12345', 'page': '2'}",0.0,,0,0.5015215873718262
+gpt-3.5,ambiguous,Give me tons of good places to eat in SF.,full,"{
+    ""query"": ""SF""
+}","{'locationId': '12345', 'page': '2'}",0.0,,0,0.4871351718902588
+gpt-3.5,vague,Any dining suggestions near me?,full,"{
+    ""query"": ""Any dining suggestions near me?""
+}","{'locationId': '12345', 'page': '2'}",0.0,,0,0.5614821910858154
+gpt-3.5,explicit,Retrieve the latest COVID-19 news for 'US-CA' (California).,full,"{
+    ""location"": ""US-CA""
+}",{'location': 'California'},1.0,,0,0.48524928092956543
+gpt-3.5,ambiguous,What's the latest on COVID in California?,full,"{
+    ""location"": ""US-CA""
+}",{'location': 'California'},1.0,,0,0.8820030689239502
+gpt-3.5,vague,COVID news near me,full,"{
+    ""location"": ""global""
+}",{'location': 'California'},1.0,,0,0.5871033668518066
+gpt-3.5,explicit,Retrieve detailed information about Japan.,full,"{
+    ""name"": ""Japan""
+}",{'name': 'Japan'},1.0,,0,0.8903789520263672
+gpt-3.5,ambiguous,What can you tell me about Japan?,full,"{
+    ""name"": ""Japan""
+}",{'name': 'Japan'},1.0,,0,0.4820554256439209
+gpt-3.5,vague,Japan,full,"{
+    ""name"": ""Japan""
+}",{'name': 'Japan'},1.0,,0,0.5614962577819824
+gpt-3.5,explicit,Get the latest COVID-19 statistics for 'US-NY' (New York State),full,"{
+    ""location"": ""US-NY""
+}",{'location': 'New York'},1.0,,0,0.5005874633789062
+gpt-3.5,ambiguous,How is COVID-19 looking in New York?,full,"{
+    ""location"": ""US-NY""
+}",{'location': 'New York'},1.0,,0,0.5296483039855957
+gpt-3.5,vague,New York,full,"{
+    ""location"": ""US-NY""
+}",{'location': 'New York'},1.0,,0,0.6255354881286621
+gpt-3.5,explicit,Find the Spotify Artist ID for 'Fall Out Boy'.,full,"{
+    ""name"": ""Fall Out Boy""
+}",{'name': 'Fall Out Boy'},1.0,,0,0.6013782024383545
+gpt-3.5,ambiguous,What's Fall Out Boy's profile?,full,"{
+    ""name"": ""Fall Out Boy""
+}",{'name': 'Fall Out Boy'},1.0,,0,0.5330719947814941
+gpt-3.5,vague,Fall Out Boy,full,"{
+    ""name"": ""Fall Out Boy""
+}",{'name': 'Fall Out Boy'},1.0,,0,0.5730719566345215
+gpt-3.5,explicit,Retrieve the balance sheet and income statement for Apple Inc. from the latest SEC filing using CIK 0000320193 and accession number 0000320193-23-000010.,full,"{
+    ""cik"": ""0000320193"",
+    ""accessionNumber"": ""0000320193-23-000010""
+}","{'cik': '0000320193', 'accessionNumber': '0000320193-23-000010'}",1.0,,0,0.6357345581054688
+gpt-3.5,ambiguous,Can I see Apple's latest financial statements?,full,"{
+    ""cik"": ""320193"",
+    ""accessionNumber"": ""0000320193-21-000056""
+}","{'cik': '0000320193', 'accessionNumber': '0000320193-23-000010'}",1.0,,0,0.6375734806060791
+gpt-3.5,vague,What are Apple's numbers?,full,"{
+    ""cik"": ""320193"",
+    ""accessionNumber"": ""0000320193-21-000056""
+}","{'cik': '0000320193', 'accessionNumber': '0000320193-23-000010'}",1.0,,0,0.7837924957275391
+gpt-3.5,explicit,Get the real-time exchange rate from Bitcoin (BTC) to US Dollar (USD).,full,"{
+    ""from_currency"": ""BTC"",
+    ""function"": ""CURRENCY_EXCHANGE_RATE"",
+    ""to_currency"": ""USD""
+}","{'from_currency': 'BTC', 'function': 'CURRENCY_EXCHANGE_RATE', 'to_currency': 'KRW'}",1.0,,0,0.7167291641235352
+gpt-3.5,ambiguous,How much is Bitcoin worth right now?,full,"{
+    ""from_currency"": ""BTC"",
+    ""function"": ""CURRENCY_EXCHANGE_RATE"",
+    ""to_currency"": ""USD""
+}","{'from_currency': 'BTC', 'function': 'CURRENCY_EXCHANGE_RATE', 'to_currency': 'KRW'}",1.0,,0,0.633763313293457
+gpt-3.5,vague,Bitcoin rate,full,"{
+    ""from_currency"": ""Bitcoin"",
+    ""function"": ""CURRENCY_EXCHANGE_RATE"",
+    ""to_currency"": ""USD""
+}","{'from_currency': 'BTC', 'function': 'CURRENCY_EXCHANGE_RATE', 'to_currency': 'KRW'}",1.0,,0,0.588320255279541
+gpt-3.5,explicit,Show the top posts from r/nosleep for the past month.,full,"{
+    ""subreddit"": ""nosleep"",
+    ""time"": ""month""
+}","{'subreddit': 'nosleep', 'time': 'month'}",1.0,,0,0.7364373207092285
+gpt-3.5,ambiguous,What's the latest in r/nosleep this month?,full,"{
+    ""subreddit"": ""nosleep"",
+    ""time"": ""month""
+}","{'subreddit': 'nosleep', 'time': 'month'}",1.0,,0,0.5855796337127686
+gpt-3.5,vague,r/nosleep latest posts,full,"{
+    ""subreddit"": ""nosleep"",
+    ""time"": ""day""
+}","{'subreddit': 'nosleep', 'time': 'month'}",1.0,,0,0.5439801216125488
+gpt-3.5,explicit,Show the top posts from r/technology for the past week.,full,"{
+    ""subreddit"": ""technology"",
+    ""time"": ""week""
+}","{'subreddit': 'nosleep', 'time': 'month'}",1.0,,0,0.8125925064086914
+gpt-3.5,ambiguous,What's the r/nosleep best of all week?,full,"{
+    ""subreddit"": ""nosleep"",
+    ""time"": ""week""
+}","{'subreddit': 'nosleep', 'time': 'month'}",1.0,,0,0.6052169799804688
+gpt-3.5,vague,r/nosleep latest,full,"{
+    ""subreddit"": ""nosleep"",
+    ""time"": ""day""
+}","{'subreddit': 'nosleep', 'time': 'month'}",1.0,,0,0.8489654064178467
+gpt-3.5,explicit,Search for the top 10 TikTok posts about 'travel hacks' from the past month.,full,"{
+    ""keyword"": ""travel hacks"",
+    ""count"": ""10"",
+    ""publish_time"": ""30""
+}","{'keyword': 'travel hacks', 'count': '10', 'publish_time': '30'}",1.0,,0,0.6856660842895508
+gpt-3.5,ambiguous,What are the trending travel hacks on TikTok this month?,full,"{
+    ""keyword"": ""travel hacks"",
+    ""count"": ""10"",
+    ""publish_time"": ""30"",
+    ""sort_type"": ""0""
+}","{'keyword': 'travel hacks', 'count': '10', 'publish_time': '30'}",1.0,,0,0.6954591274261475
+gpt-3.5,vague,Travel hacks,full,"{
+    ""keyword"": ""Travel hacks"",
+    ""count"": ""10"",
+    ""offset"": ""0"",
+    ""use_filters"": ""1"",
+    ""publish_time"": ""0"",
+    ""sort_type"": ""1""
+}","{'keyword': 'travel hacks', 'count': '10', 'publish_time': '30'}",1.0,,0,0.8668317794799805
+gpt-3.5,explicit,Find 20 live TikTok streams about cooking tips.,full,"{
+    ""keyword"": ""cooking tips"",
+    ""count"": ""20""
+}","{'keyword': 'cooking tips', 'count': '20'}",1.0,,0,0.6421709060668945
+gpt-3.5,ambiguous,20 TikTok lives about cooking?,full,"{
+    ""keyword"": ""cooking"",
+    ""count"": ""20""
+}","{'keyword': 'cooking tips', 'count': '20'}",1.0,,0,0.6762759685516357
+gpt-3.5,vague,cooking lives right now,full,"{
+    ""keyword"": ""cooking lives right now""
+}","{'keyword': 'cooking tips', 'count': '20'}",0.5,,0,0.6253926753997803
+gpt-3.5,explicit,"Search for full-time software engineer jobs in the US, posted within the last week.",full,"{
+    ""query"": ""full-time software engineer jobs in the US"",
+    ""country"": ""us"",
+    ""date_posted"": ""week"",
+    ""employment_types"": ""FULLTIME""
+}","{'query': 'software engineer', 'country': 'US', 'date_posted': 'week', 'employment_types': 'FULLTIME'}",1.0,,0,1.107053279876709
+gpt-3.5,ambiguous,Are there any recent software engineer jobs in the US right now?,full,"{
+    ""query"": ""software engineer jobs in the US"",
+    ""country"": ""us"",
+    ""date_posted"": ""today""
+}","{'query': 'software engineer', 'country': 'US', 'date_posted': 'week', 'employment_types': 'FULLTIME'}",0.75,,0,0.8072676658630371
+gpt-3.5,vague,software engineer jobs in the US,full,"{
+    ""query"": ""software engineer jobs in the US"",
+    ""country"": ""us""
+}","{'query': 'software engineer', 'country': 'US', 'date_posted': 'week', 'employment_types': 'FULLTIME'}",0.5,,0,0.612598180770874
+gpt-3.5,explicit,"Search for remote-only, full-time software engineer jobs in the US, posted within the last week.",full,"{
+    ""query"": ""remote-only, full-time software engineer jobs in the US"",
+    ""country"": ""us"",
+    ""date_posted"": ""week"",
+    ""work_from_home"": ""True"",
+    ""employment_types"": ""FULLTIME""
+}","{'query': 'software engineer', 'country': 'US', 'date_posted': 'week', 'employment_types': 'FULLTIME', 'work_from_home': 'true'}",1.0,,0,0.8929784297943115
+gpt-3.5,ambiguous,Any recent software engineer jobs in the US right now where I don't need to go to the office?,full,"{
+  ""query"": ""software engineer jobs in the US work from home"",
+  ""country"": ""us"",
+  ""work_from_home"": ""True""
+}","{'query': 'software engineer', 'country': 'US', 'date_posted': 'week', 'employment_types': 'FULLTIME', 'work_from_home': 'true'}",0.6,,0,0.980487585067749
+gpt-3.5,vague,software engineer home jobs in the US,full,"{
+    ""query"": ""software engineer home jobs in the US"",
+    ""country"": ""us"",
+    ""work_from_home"": ""True""
+}","{'query': 'software engineer', 'country': 'US', 'date_posted': 'week', 'employment_types': 'FULLTIME', 'work_from_home': 'true'}",0.6,,0,0.7007033824920654

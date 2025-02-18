@@ -1,0 +1,61 @@
+[
+    {
+        "llm_type":"mistral",
+        "query_type":"explicit",
+        "query":"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",
+        "spec_type":"partial",
+        "generated_params":"{'q':'London','days':'0','aqi':'yes'}",
+        "scores":100.0,
+        "eval_times":0.7758083344
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"explicit",
+        "query":"Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.",
+        "spec_type":"partial",
+        "generated_params":"{'fromId':'JFK','toId':'ICN','departDate':'2023-10-05','adults':'2','cabinClass':'economy'}",
+        "scores":100.0,
+        "eval_times":1.2393586636
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"ambiguous",
+        "query":"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",
+        "spec_type":"partial",
+        "generated_params":"{\"q\":\"London\",\"days\":\"0\",\"aqi\":\"yes\"}",
+        "scores":100.0,
+        "eval_times":0.6732099056
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"ambiguous",
+        "query":"I need an affordable flight for today's date from JFK airport to Seoul for my husband and I",
+        "spec_type":"partial",
+        "generated_params":"{'fromId':'JFK','toId':'SEL','departDate':'2023-10-05','adults':'2','currency_code':'USD'}",
+        "scores":80.0,
+        "eval_times":1.3393478394
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"vague",
+        "query":"Is it a good idea to go out in London today?",
+        "spec_type":"partial",
+        "generated_params":"{\"q\":\"London\",\"days\":\"1\"}",
+        "scores":76.6666666667,
+        "eval_times":0.7113413811
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"vague",
+        "query":"Can I get a good flight deal from New York to South Korea today?",
+        "spec_type":"partial",
+        "generated_params":{
+            "fromId":"NYC",
+            "toId":"SEL",
+            "departDate":"2023-10-05",
+            "currency_code":"USD"
+        },
+        "scores":66.0,
+        "eval_times":2.9058191776
+    }
+]

@@ -1,0 +1,7 @@
+llm_type,query_type,query,spec_type,generated_params,scores,eval_times
+mistral,explicit,"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",partial,"{'q':'London','days':'0','aqi':'yes'}",100.0,0.7758083343505859
+mistral,explicit,Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.,partial,"{'fromId':'JFK','toId':'ICN','departDate':'2023-10-05','adults':'2','cabinClass':'economy'}",100.0,1.23935866355896
+mistral,ambiguous,"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",partial,"{""q"":""London"",""days"":""0"",""aqi"":""yes""}",100.0,0.6732099056243896
+mistral,ambiguous,I need an affordable flight for today's date from JFK airport to Seoul for my husband and I,partial,"{'fromId':'JFK','toId':'SEL','departDate':'2023-10-05','adults':'2','currency_code':'USD'}",80.0,1.3393478393554688
+mistral,vague,Is it a good idea to go out in London today?,partial,"{""q"":""London"",""days"":""1""}",76.66666666666667,0.711341381072998
+mistral,vague,Can I get a good flight deal from New York to South Korea today?,partial,"{'fromId': 'NYC', 'toId': 'SEL', 'departDate': '2023-10-05', 'currency_code': 'USD'}",66.0,2.9058191776275635

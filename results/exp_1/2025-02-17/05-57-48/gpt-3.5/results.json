@@ -1,0 +1,1877 @@
+[
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",
+        "spec_type":"full",
+        "generated_params":"{\n  \"q\": \"London\",\n  \"days\": \"1\",\n  \"aqi\": \"yes\"\n}",
+        "ground_truth":{
+            "q":"London",
+            "days":"1",
+            "aqi":"yes"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.2082092762
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"London\",\n    \"aqi\": \"yes\"\n}",
+        "ground_truth":{
+            "q":"London",
+            "days":"1",
+            "aqi":"yes"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5491669178
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Is it a good idea to go out in London today?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"London\",\n    \"dt\": \"2023-10-18\"\n}",
+        "ground_truth":{
+            "q":"London",
+            "days":"1",
+            "aqi":"yes"
+        },
+        "precision":0.3333333333,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.625436306
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.",
+        "spec_type":"full",
+        "generated_params":"{\n  \"fromId\": \"JFK.AIRPORT\",\n  \"toId\": \"ICN.AIRPORT\",\n  \"departDate\": \"2022-10-21\",\n  \"adults\": \"2\",\n  \"cabinClass\": \"ECONOMY\"\n}",
+        "ground_truth":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"STO.AIRPORT",
+            "departDate":"2024-12-15",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8236322403
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I need an affordable flight for today's date from JFK airport to Seoul for my husband and I",
+        "spec_type":"full",
+        "generated_params":"{\n  \"fromId\": \"JFK.AIRPORT\",\n  \"toId\": \"ICN.AIRPORT\",\n  \"departDate\": \"2022-01-20\",\n  \"adults\": \"2\"\n}",
+        "ground_truth":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"STO.AIRPORT",
+            "departDate":"2024-12-15",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "precision":0.8,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7643339634
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Can I get a good flight deal from New York to South Korea today?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"fromId\": \"JFK.AIRPORT\",\n    \"toId\": \"ICN.AIRPORT\",\n    \"departDate\": \"2022-10-28\"\n}",
+        "ground_truth":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"STO.AIRPORT",
+            "departDate":"2024-12-15",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "precision":0.6,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.5865356922
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find a flight from New York City (NYC) to Seoul (ICN) for two adults and one infant",
+        "spec_type":"full",
+        "generated_params":"{\n    \"originSkyId\": \"NYC\",\n    \"destinationSkyId\": \"ICN\",\n    \"originEntityId\": \"NYCA-sky\",\n    \"destinationEntityId\": \"ICN-sky\",\n    \"date\": \"2022-12-25\",\n    \"adults\": \"2\",\n    \"children\": \"0\",\n    \"infants\": \"1\"\n}",
+        "ground_truth":{
+            "originSkyId":"NYC",
+            "destinationSkyId":"STO",
+            "adults":"2",
+            "infants":"1"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.388576746
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"My wife, newborn, and I need to visit her parents in Seoul. We're leaving from NYC.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"originSkyId\": \"NYC\",\n    \"destinationSkyId\": \"SEL\",\n    \"originEntityId\": \"NYCA-sky\",\n    \"destinationEntityId\": \"SEL-sky\",\n    \"date\": \"2023-01-15\",\n    \"adults\": \"2\",\n    \"children\": \"1\",\n    \"infants\": \"1\",\n    \"cabinClass\": \"economy\",\n    \"sortBy\": \"best\",\n    \"currency\": \"USD\",\n    \"market\": \"en-US\",\n    \"countryCode\": \"US\"\n}",
+        "ground_truth":{
+            "originSkyId":"NYC",
+            "destinationSkyId":"STO",
+            "adults":"2",
+            "infants":"1"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.3482539654
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Looking for a way to get my family to Seoul.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"originSkyId\": \"originSkyId_value\",\n    \"destinationSkyId\": \"destinationSkyId_value\",\n    \"originEntityId\": \"originEntityId_value\",\n    \"destinationEntityId\": \"destinationEntityId_value\",\n    \"date\": \"YYYY-MM-DD\",\n    \"destination\": \"Seoul\",\n    \"adults\": \"1\",\n    \"children\": \"0\",\n    \"infants\": \"0\",\n    \"sortBy\": \"best\",\n    \"currency\": \"USD\",\n    \"market\": \"en-US\",\n    \"countryCode\": \"US\"\n}",
+        "ground_truth":{
+            "originSkyId":"NYC",
+            "destinationSkyId":"STO",
+            "adults":"2",
+            "infants":"1"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":1,
+        "eval_times":1.2616918087
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find airports in New York City (NYC) that offer flights. Display the results in Spanish (Mexico locale).",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"New York City\",\n    \"locale\": \"es_MX\"\n}",
+        "ground_truth":{
+            "query":"NYC",
+            "locale":"es-MX"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6012277603
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I need flights from NYC but I can't understand English, I speak Spanish.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"NYC\",\n    \"locale\": \"spanish\"\n}",
+        "ground_truth":{
+            "query":"NYC",
+            "locale":"es-MX"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5281512737
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Help me find flights from NYC in a language I understand.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"NYC\",\n    \"locale\": \"en\"\n}",
+        "ground_truth":{
+            "query":"NYC",
+            "locale":"es-MX"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5540058613
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find a hotel in New York City (NYC) for two adults, checking in today and checking out next Friday. Display prices in USD.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"geoId\": \"28914\",\n    \"checkIn\": \"2022-02-22\",\n    \"checkOut\": \"2022-02-25\",\n    \"adults\": \"2\",\n    \"currencyCode\": \"USD\"\n}",
+        "ground_truth":{
+            "geoId":"NYC",
+            "checkIn":"2024-12-16",
+            "checkOut":"2024-12-20",
+            "adults":"2",
+            "currencyCode":"USD"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7938380241
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I need a hotel for my husband and I in NYC. We'll be staying from today until next Friday.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"geoId\": \"60763\",\n    \"checkIn\": \"2022-10-17\",\n    \"checkOut\": \"2022-10-21\",\n    \"adults\": \"2\"\n}",
+        "ground_truth":{
+            "geoId":"NYC",
+            "checkIn":"2024-12-16",
+            "checkOut":"2024-12-20",
+            "adults":"2",
+            "currencyCode":"USD"
+        },
+        "precision":0.8,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8817067146
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"We need a hotel in New York for a few days.",
+        "spec_type":"full",
+        "generated_params":"{\n  \"geoId\": \"60763\",\n  \"checkIn\": \"2023-01-15\",\n  \"checkOut\": \"2023-01-20\"\n}",
+        "ground_truth":{
+            "geoId":"NYC",
+            "checkIn":"2024-12-16",
+            "checkOut":"2024-12-20",
+            "adults":"2",
+            "currencyCode":"USD"
+        },
+        "precision":0.6,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7143847942
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find a hotel in New York City (NYC). We need 2 rooms, each for one adult, who will be checking in on December 16 and checking out on December 20. Display prices in USD.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"geoId\": \"60763\",\n    \"checkIn\": \"2022-12-16\",\n    \"checkOut\": \"2022-12-20\",\n    \"pageNumber\": \"1\",\n    \"adults\": \"1\",\n    \"rooms\": \"2\",\n    \"currencyCode\": \"USD\"\n}",
+        "ground_truth":{
+            "geoId":"NYC",
+            "checkIn":"2024-12-16",
+            "checkOut":"2024-12-20",
+            "adults":"2",
+            "rooms":"2",
+            "currencyCode":"USD"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.9225537777
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"My coworker and I need a separate room for our business trip. We'll be in NYC from the 16th to the 20th.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"geoId\": \"60763\",\n    \"checkIn\": \"2023-01-16\",\n    \"checkOut\": \"2023-01-20\",\n    \"rooms\": \"1\"\n}",
+        "ground_truth":{
+            "geoId":"NYC",
+            "checkIn":"2024-12-16",
+            "checkOut":"2024-12-20",
+            "adults":"2",
+            "rooms":"2",
+            "currencyCode":"USD"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":2.6657643318
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"We're looking for a place to stay in NYC for a work trip.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"geoId\": \"60763\",\n    \"checkIn\": \"2022-10-10\",\n    \"checkOut\": \"2022-10-15\"\n}",
+        "ground_truth":{
+            "geoId":"NYC",
+            "checkIn":"2024-12-16",
+            "checkOut":"2024-12-20",
+            "adults":"2",
+            "rooms":"2",
+            "currencyCode":"USD"
+        },
+        "precision":0.5,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8487706184
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find news articles about climate change specifically in Ireland.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"climate change\",\n    \"language\": \"en\",\n    \"region\": \"IE\"\n}",
+        "ground_truth":{
+            "query":"Climate Change",
+            "language":"",
+            "region":"IE"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6658074856
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I've heard about climate issues in Ireland. Any recent news?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"climate issues in Ireland\",\n    \"language\": \"en\"\n}",
+        "ground_truth":{
+            "query":"Climate Change",
+            "language":"",
+            "region":"IE"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7223672867
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"What\u2019s happening to Ireland?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"What\u2019s happening to Ireland?\",\n    \"language\": \"en\"\n}",
+        "ground_truth":{
+            "query":"Climate Change",
+            "language":"",
+            "region":"IE"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6307253838
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find hotels that have closed down in Boston, USA, and provide their names and contact email addresses.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"hotels closed down\",\n    \"limit\": \"500\",\n    \"lat\": \"\",\n    \"lng\": \"\",\n    \"zoom\": \"13\",\n    \"language\": \"en\",\n    \"region\": \"US\",\n    \"verified\": \"\",\n    \"business_status\": \"CLOSED\",\n    \"extract_emails_and_contacts\": \"True\",\n    \"fields\": \"name,email\"\n}",
+        "ground_truth":{
+            "query":"Hotels in Boston, USA",
+            "business_status":"CLOSED",
+            "extract_emails_and_contacts":true
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.9828698635
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I need to find the contact info of the hotel I stayed at in Boston, but I think it's closed down now.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"hotel in Boston closed down\",\n    \"business_status\": \"CLOSED\",\n    \"extract_emails_and_contacts\": \"True\",\n    \"fields\": \"business_id,type,phone_number,full_address\"\n}",
+        "ground_truth":{
+            "query":"Hotels in Boston, USA",
+            "business_status":"CLOSED",
+            "extract_emails_and_contacts":true
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.1737656593
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Need info on a hotel in Boston that might not be open.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"hotel in Boston not open\",\n    \"limit\": \"20\",\n    \"language\": \"en\",\n    \"region\": \"us\",\n    \"business_status\": \"CLOSED\"\n}",
+        "ground_truth":{
+            "query":"Hotels in Boston, USA",
+            "business_status":"CLOSED",
+            "extract_emails_and_contacts":true
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8285422325
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Retrieve reviews for this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76, specifically for its location in Ireland.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"business_id\": \"0x89c259b5a9bd152b:0x31453e62a3be9f76\",\n    \"region\": \"Ireland\"\n}",
+        "ground_truth":{
+            "business_id":"0x89c259b5a9bd152b:0x31453e62a3be9f76",
+            "region":"ie"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7875592709
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I need to see what people are saying about this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76 in Ireland.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"business_id\": \"0x89c259b5a9bd152b:0x31453e62a3be9f76\",\n    \"region\": \"Ireland\",\n    \"language\": \"en\"\n}",
+        "ground_truth":{
+            "business_id":"0x89c259b5a9bd152b:0x31453e62a3be9f76",
+            "region":"ie"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7803277969
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"What's going on with this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76 in Ireland?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"business_id\": \"0x89c259b5a9bd152b:0x31453e62a3be9f76\",\n    \"region\": \"Ireland\"\n}",
+        "ground_truth":{
+            "business_id":"0x89c259b5a9bd152b:0x31453e62a3be9f76",
+            "region":"ie"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8079276085
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Calculate 1.7777 minus 2.9057345 and round the result to five decimal places.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"numbers\": \"1.7777-2.9057345\",\n    \"decimalPlaces\": \"5\"\n}",
+        "ground_truth":{
+            "numbers":"1.7777, -, 2.9057345",
+            "decimalPlaces":"5"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6854946613
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What\u2019s 1.7777 - 2.9057345 rounded to five decimals?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"numbers\": \"1.7777 - 2.9057345\",\n    \"decimalPlaces\": \"5\"\n}",
+        "ground_truth":{
+            "numbers":"1.7777, -, 2.9057345",
+            "decimalPlaces":"5"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6941921711
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Solve 1.7777 - 2.9057345 with rounding.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"numbers\": \"1.7777 - 2.9057345\",\n    \"decimalPlaces\": \"2\"\n}",
+        "ground_truth":{
+            "numbers":"1.7777, -, 2.9057345",
+            "decimalPlaces":"5"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6925189495
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Search for Tamagotchi toy in new condition that are on sale in the UK.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"Tamagotchi toy\",\n    \"country\": \"gb\",\n    \"product_condition\": \"NEW\",\n    \"on_sale\": \"True\"\n}",
+        "ground_truth":{
+            "q":"Tamagotchi",
+            "country":"UK",
+            "product_condition":"NEW",
+            "on_sale":true
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7774560452
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I want to buy a brand new Tamagotchi for my niece. Are there any on sale in the UK?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"Tamagotchi\",\n    \"country\": \"gb\",\n    \"product_condition\": \"NEW\",\n    \"on_sale\": \"True\"\n}",
+        "ground_truth":{
+            "q":"Tamagotchi",
+            "country":"UK",
+            "product_condition":"NEW",
+            "on_sale":true
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.6959507465
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"I\u2019m looking for a Tamagotchi in the UK.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"Tamagotchi\",\n    \"country\": \"gb\",\n    \"language\": \"en\"\n}",
+        "ground_truth":{
+            "q":"Tamagotchi",
+            "country":"UK",
+            "product_condition":"NEW",
+            "on_sale":true
+        },
+        "precision":0.5,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5786716938
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Search for new Tamagotchi toy under $20.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"new Tamagotchi toy\",\n    \"max_price\": \"20\",\n    \"product_condition\": \"NEW\"\n}",
+        "ground_truth":{
+            "q":"Tamagotchi",
+            "max_price":"20",
+            "product_condition":"NEW"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.9099781513
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I want to buy a brand new Tamagotchi for my son, but my budget is $20.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"Tamagotchi\",\n    \"country\": \"us\",\n    \"language\": \"en\",\n    \"min_price\": \"1\",\n    \"max_price\": \"20\",\n    \"product_condition\": \"NEW\"\n}",
+        "ground_truth":{
+            "q":"Tamagotchi",
+            "max_price":"20",
+            "product_condition":"NEW"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7338352203
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"I need a Tamagotchi for my son that is not too expensive.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"Tamagotchi for my son\",\n    \"max_price\": \"50\",\n    \"sort_by\": \"LOWEST_PRICE\",\n    \"product_condition\": \"NEW\"\n}",
+        "ground_truth":{
+            "q":"Tamagotchi",
+            "max_price":"20",
+            "product_condition":"NEW"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.1589927673
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Give me product reviews for product with ID=11577822456427762145 in the United States and translate the results to Spanish.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"product_id\": \"11577822456427762145\",\n    \"country\": \"us\",\n    \"language\": \"es\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"us",
+            "language":"es"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.854932785
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Show me reviews for this productwith ID=11577822456427762145, but I speak Spanish.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"product_id\": \"11577822456427762145\",\n    \"language\": \"es\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"us",
+            "language":"es"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8467764854
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Que piensa la gente sobre este producto con ID=11577822456427762145?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"product_id\": \"11577822456427762145\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"us",
+            "language":"es"
+        },
+        "precision":0.3333333333,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6338829994
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find product offers for product with ID=11577822456427762145 in the United States and translate the results to Spanish.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"product_id\": \"11577822456427762145\",\n    \"country\": \"us\",\n    \"language\": \"es\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"us",
+            "language":"es"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6523010731
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I'm looking for offers on product with ID=11577822456427762145. I'm from the US but want to send the offers to my mom who speaks Spanish.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"product_id\": \"11577822456427762145\",\n    \"page\": \"1\",\n    \"country\": \"es\",\n    \"language\": \"es\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"us",
+            "language":"es"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.783755064
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Show me the best deals for this product with ID=11577822456427762145 but I can't speak English.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"product_id\": \"11577822456427762145\",\n    \"page\": \"1\",\n    \"country\": \"us\",\n    \"language\": \"not_en\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"us",
+            "language":"es"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7631554604
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Provide details for product with ID=11577822456427762145 available in Korea, and translate the results to English.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"11577822456427762145\",\n    \"country\": \"kr\",\n    \"language\": \"en\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"kr",
+            "language":"en"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6498105526
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Can you tell me about product ID=11577822456427762145 available in Korea? I can only speak English though.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"11577822456427762145\",\n    \"country\": \"kr\",\n    \"language\": \"en\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"kr",
+            "language":"en"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7364771366
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"I want to know more about this product with ID=11577822456427762145 in Korea.",
+        "spec_type":"full",
+        "generated_params":"{\n  \"q\": \"11577822456427762145\",\n  \"country\": \"kr\"\n}",
+        "ground_truth":{
+            "product_id":"11577822456427762145",
+            "country":"kr",
+            "language":"en"
+        },
+        "precision":0.3333333333,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.9190452099
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"I need the weather forecast in Paris for this week. Include information about high tides as well.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"Paris\",\n    \"days\": \"7\",\n    \"tides\": \"yes\"\n}",
+        "ground_truth":{
+            "q":"Paris",
+            "days":"7",
+            "tides":"yes"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7529573441
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I'm in Paris for the week and want to visit the beach. What does the weather look like this week and should I worry about high tides?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"Paris\",\n    \"days\": \"7\",\n    \"tides\": \"yes\"\n}",
+        "ground_truth":{
+            "q":"Paris",
+            "days":"7",
+            "tides":"yes"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7056708336
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Is it a good time to go to the beach in Paris this week?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"Paris\",\n    \"days\": \"7\"\n}",
+        "ground_truth":{
+            "q":"Paris",
+            "days":"7",
+            "tides":"yes"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5703670979
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"I\u2019m planning to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York in NYC. Please display the prices in SEK (Swedish Krona).",
+        "spec_type":"full",
+        "generated_params":"{\n    \"restaurantsId\": \"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York\",\n    \"currencyCode\": \"SEK\"\n}",
+        "ground_truth":{
+            "restaurantsId":"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York",
+            "currencyCode":"SEK"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.9104366302
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I want to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York but I'm from Sweden so I don't know how much the prices are.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"restaurantsId\": \"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York\",\n    \"currencyCode\": \"SEK\"\n}",
+        "ground_truth":{
+            "restaurantsId":"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York",
+            "currencyCode":"SEK"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7872643471
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Give me details about Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"restaurantsId\": \"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York\",\n    \"currencyCode\": \"USD\"\n}",
+        "ground_truth":{
+            "restaurantsId":"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York",
+            "currencyCode":"SEK"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8958616257
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Give me the date of when artist with ID 2uFUBdaVGtyMqckSeCl0Qj released their album Experience.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\",\n    \"type\": \"album\"\n}",
+        "ground_truth":{
+            "artistId":"2uFUBdaVGtyMqckSeCl0Qj",
+            "type":"album"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6798579693
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj come out with his album Experience?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\",\n    \"type\": \"album\"\n}",
+        "ground_truth":{
+            "artistId":"2uFUBdaVGtyMqckSeCl0Qj",
+            "type":"album"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.790545702
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"When did this artist with ID=2uFUBdaVGtyMqckSeCl0Qj release Experience?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\",\n    \"type\": \"album\"\n}",
+        "ground_truth":{
+            "artistId":"2uFUBdaVGtyMqckSeCl0Qj",
+            "type":"album"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6651120186
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj release their single Night?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\",\n    \"type\": \"single\"\n}",
+        "ground_truth":{
+            "artistId":"2uFUBdaVGtyMqckSeCl0Qj",
+            "type":"single"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6604835987
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj come out with his song Night?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\",\n    \"type\": \"single\"\n}",
+        "ground_truth":{
+            "artistId":"2uFUBdaVGtyMqckSeCl0Qj",
+            "type":"single"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7201366425
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"When did this artist with ID=2uFUBdaVGtyMqckSeCl0Qj release Night?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\",\n    \"type\": \"single\"\n}",
+        "ground_truth":{
+            "artistId":"2uFUBdaVGtyMqckSeCl0Qj",
+            "type":"single"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7973048687
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Give me the date that user sparklemilktea joined Instagram.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"sparklemilktea\",\n    \"include_about\": \"True\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "include_about":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6461238861
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"When did sparklemilktea join Instagram?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"sparklemilktea\",\n    \"include_about\": \"True\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "include_about":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6291053295
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"When did sparklemilktea start using Instagram?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"sparklemilktea\",\n    \"include_about\": \"True\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "include_about":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8240537643
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Give me at least 20 followers of the user sparklemilktea.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"sparklemilktea\",\n    \"amount\": \"20\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5684831142
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Can you tell me the top 20 followers of sparklemilktea?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"sparklemilktea\",\n    \"amount\": \"20\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6361865997
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Who are some followers of sparklemilktea?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"sparklemilktea\",\n    \"amount\": \"50\",\n    \"pagination_token\": \"\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6906282902
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Give me at least 20 people that the user sparklemilktea follows.",
+        "spec_type":"full",
+        "generated_params":"{\n  \"username_or_id_or_url\": \"sparklemilktea\",\n  \"amount\": \"20\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5722420216
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Can you tell me the top 20 people who sparklemilktea follows?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"sparklemilktea\",\n    \"amount\": \"20\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5570373535
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Can you list some people who sparklemilktea follows?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"sparklemilktea\",\n    \"amount\": \"50\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.724843502
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Show me posts by kiyomi_bori and provide the HTML code to embed them.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"kiyomi_bori\",\n    \"url_embed_safe\": \"True\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"kiyomi_bori",
+            "url_embed_safe":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7078113556
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Can you get posts by kiyomi_bori and make them embeddable for my website?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"kiyomi_bori\",\n    \"url_embed_safe\": \"True\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"kiyomi_bori",
+            "url_embed_safe":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.1669604778
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"I want to see posts by kiyomi_bori to put on my website.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"username_or_id_or_url\": \"kiyomi_bori\",\n    \"pagination_token\": \"\",\n    \"url_embed_safe\": \"True\"\n}",
+        "ground_truth":{
+            "username_or_id_or_url":"kiyomi_bori",
+            "url_embed_safe":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6647543907
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Search for the user kiyomi_bori and provide an embeddable profile link.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"search_query\": \"kiyomi_bori\",\n    \"url_embed_safe\": \"True\"\n}",
+        "ground_truth":{
+            "search_query":"kiyomi_bori",
+            "url_embed_safe":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5512404442
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Find kiyomi_bori's profile so I can embed it.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"search_query\": \"kiyomi_bori\",\n    \"url_embed_safe\": \"True\"\n}",
+        "ground_truth":{
+            "search_query":"kiyomi_bori",
+            "url_embed_safe":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.9081163406
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"I want to see kiyomi_bori to put on my website.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"search_query\": \"kiyomi_bori\",\n    \"url_embed_safe\": \"True\"\n}",
+        "ground_truth":{
+            "search_query":"kiyomi_bori",
+            "url_embed_safe":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6444201469
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Give me the last 10 quarterly balance sheets for MSFT from the 10-Q filings.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"ticker\": \"MSFT\",\n    \"formtype\": \"10-Q\",\n    \"filingorder\": \"10\"\n}",
+        "ground_truth":{
+            "ticker":"msft",
+            "formtype":"10-q",
+            "filingorder":"10"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7861783504
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Show me the last 10 quarterly reports for MSFT.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"ticker\": \"MSFT\",\n    \"formtype\": \"10-Q\",\n    \"filingorder\": \"10\"\n}",
+        "ground_truth":{
+            "ticker":"msft",
+            "formtype":"10-q",
+            "filingorder":"10"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8546261787
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Give me MSFT\u2019s latest financial reports.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"ticker\": \"MSFT\",\n    \"formtype\": \"10-K\",\n    \"filingorder\": \"0\"\n}",
+        "ground_truth":{
+            "ticker":"msft",
+            "formtype":"10-q",
+            "filingorder":"10"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7660763264
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Search for books with the keyword 'artificial intelligence' on page 2 of the results.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"artificial intelligence\",\n    \"page\": \"2\"\n}",
+        "ground_truth":{
+            "keyword":"artificial intelligence",
+            "page":"2"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5343749523
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Give me lots of good books on artificial intelligence.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"lots of good books on artificial intelligence.\",\n    \"page\": \"1\"\n}",
+        "ground_truth":{
+            "keyword":"artificial intelligence",
+            "page":"2"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6557028294
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Any good books on AI?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"Any good books on AI?\"\n}",
+        "ground_truth":{
+            "keyword":"artificial intelligence",
+            "page":"2"
+        },
+        "precision":0.5,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7747046947
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find quotes containing the word 'courage' on the first page of results.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"courage\",\n    \"page\": \"1\"\n}",
+        "ground_truth":{
+            "keyword":"courage"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7064290047
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Do you know any quotes about being brave?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"being brave\"\n}",
+        "ground_truth":{
+            "keyword":"courage"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6110365391
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Give me a brave quote.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"brave\"\n}",
+        "ground_truth":{
+            "keyword":"courage"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.4732723236
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Search for restaurant locations in 'San Francisco'.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"San Francisco\"\n}",
+        "ground_truth":{
+            "locationId":"12345",
+            "page":"2"
+        },
+        "precision":0.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5015215874
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Give me tons of good places to eat in SF.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"SF\"\n}",
+        "ground_truth":{
+            "locationId":"12345",
+            "page":"2"
+        },
+        "precision":0.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.4871351719
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Any dining suggestions near me?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"Any dining suggestions near me?\"\n}",
+        "ground_truth":{
+            "locationId":"12345",
+            "page":"2"
+        },
+        "precision":0.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5614821911
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Retrieve the latest COVID-19 news for 'US-CA' (California).",
+        "spec_type":"full",
+        "generated_params":"{\n    \"location\": \"US-CA\"\n}",
+        "ground_truth":{
+            "location":"California"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.4852492809
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What's the latest on COVID in California?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"location\": \"US-CA\"\n}",
+        "ground_truth":{
+            "location":"California"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8820030689
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"COVID news near me",
+        "spec_type":"full",
+        "generated_params":"{\n    \"location\": \"global\"\n}",
+        "ground_truth":{
+            "location":"California"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5871033669
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Retrieve detailed information about Japan.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"name\": \"Japan\"\n}",
+        "ground_truth":{
+            "name":"Japan"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.890378952
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What can you tell me about Japan?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"name\": \"Japan\"\n}",
+        "ground_truth":{
+            "name":"Japan"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.4820554256
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Japan",
+        "spec_type":"full",
+        "generated_params":"{\n    \"name\": \"Japan\"\n}",
+        "ground_truth":{
+            "name":"Japan"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5614962578
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Get the latest COVID-19 statistics for 'US-NY' (New York State)",
+        "spec_type":"full",
+        "generated_params":"{\n    \"location\": \"US-NY\"\n}",
+        "ground_truth":{
+            "location":"New York"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5005874634
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"How is COVID-19 looking in New York?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"location\": \"US-NY\"\n}",
+        "ground_truth":{
+            "location":"New York"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.529648304
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"New York",
+        "spec_type":"full",
+        "generated_params":"{\n    \"location\": \"US-NY\"\n}",
+        "ground_truth":{
+            "location":"New York"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6255354881
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find the Spotify Artist ID for 'Fall Out Boy'.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"name\": \"Fall Out Boy\"\n}",
+        "ground_truth":{
+            "name":"Fall Out Boy"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6013782024
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What's Fall Out Boy's profile?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"name\": \"Fall Out Boy\"\n}",
+        "ground_truth":{
+            "name":"Fall Out Boy"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5330719948
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Fall Out Boy",
+        "spec_type":"full",
+        "generated_params":"{\n    \"name\": \"Fall Out Boy\"\n}",
+        "ground_truth":{
+            "name":"Fall Out Boy"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5730719566
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Retrieve the balance sheet and income statement for Apple Inc. from the latest SEC filing using CIK 0000320193 and accession number 0000320193-23-000010.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"cik\": \"0000320193\",\n    \"accessionNumber\": \"0000320193-23-000010\"\n}",
+        "ground_truth":{
+            "cik":"0000320193",
+            "accessionNumber":"0000320193-23-000010"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6357345581
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Can I see Apple's latest financial statements?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"cik\": \"320193\",\n    \"accessionNumber\": \"0000320193-21-000056\"\n}",
+        "ground_truth":{
+            "cik":"0000320193",
+            "accessionNumber":"0000320193-23-000010"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6375734806
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"What are Apple's numbers?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"cik\": \"320193\",\n    \"accessionNumber\": \"0000320193-21-000056\"\n}",
+        "ground_truth":{
+            "cik":"0000320193",
+            "accessionNumber":"0000320193-23-000010"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7837924957
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Get the real-time exchange rate from Bitcoin (BTC) to US Dollar (USD).",
+        "spec_type":"full",
+        "generated_params":"{\n    \"from_currency\": \"BTC\",\n    \"function\": \"CURRENCY_EXCHANGE_RATE\",\n    \"to_currency\": \"USD\"\n}",
+        "ground_truth":{
+            "from_currency":"BTC",
+            "function":"CURRENCY_EXCHANGE_RATE",
+            "to_currency":"KRW"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7167291641
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"How much is Bitcoin worth right now?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"from_currency\": \"BTC\",\n    \"function\": \"CURRENCY_EXCHANGE_RATE\",\n    \"to_currency\": \"USD\"\n}",
+        "ground_truth":{
+            "from_currency":"BTC",
+            "function":"CURRENCY_EXCHANGE_RATE",
+            "to_currency":"KRW"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6337633133
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Bitcoin rate",
+        "spec_type":"full",
+        "generated_params":"{\n    \"from_currency\": \"Bitcoin\",\n    \"function\": \"CURRENCY_EXCHANGE_RATE\",\n    \"to_currency\": \"USD\"\n}",
+        "ground_truth":{
+            "from_currency":"BTC",
+            "function":"CURRENCY_EXCHANGE_RATE",
+            "to_currency":"KRW"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5883202553
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Show the top posts from r\/nosleep for the past month.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"subreddit\": \"nosleep\",\n    \"time\": \"month\"\n}",
+        "ground_truth":{
+            "subreddit":"nosleep",
+            "time":"month"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7364373207
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What's the latest in r\/nosleep this month?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"subreddit\": \"nosleep\",\n    \"time\": \"month\"\n}",
+        "ground_truth":{
+            "subreddit":"nosleep",
+            "time":"month"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5855796337
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"r\/nosleep latest posts",
+        "spec_type":"full",
+        "generated_params":"{\n    \"subreddit\": \"nosleep\",\n    \"time\": \"day\"\n}",
+        "ground_truth":{
+            "subreddit":"nosleep",
+            "time":"month"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.5439801216
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Show the top posts from r\/technology for the past week.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"subreddit\": \"technology\",\n    \"time\": \"week\"\n}",
+        "ground_truth":{
+            "subreddit":"nosleep",
+            "time":"month"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8125925064
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What's the r\/nosleep best of all week?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"subreddit\": \"nosleep\",\n    \"time\": \"week\"\n}",
+        "ground_truth":{
+            "subreddit":"nosleep",
+            "time":"month"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.60521698
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"r\/nosleep latest",
+        "spec_type":"full",
+        "generated_params":"{\n    \"subreddit\": \"nosleep\",\n    \"time\": \"day\"\n}",
+        "ground_truth":{
+            "subreddit":"nosleep",
+            "time":"month"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8489654064
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Search for the top 10 TikTok posts about 'travel hacks' from the past month.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"travel hacks\",\n    \"count\": \"10\",\n    \"publish_time\": \"30\"\n}",
+        "ground_truth":{
+            "keyword":"travel hacks",
+            "count":"10",
+            "publish_time":"30"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6856660843
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What are the trending travel hacks on TikTok this month?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"travel hacks\",\n    \"count\": \"10\",\n    \"publish_time\": \"30\",\n    \"sort_type\": \"0\"\n}",
+        "ground_truth":{
+            "keyword":"travel hacks",
+            "count":"10",
+            "publish_time":"30"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6954591274
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Travel hacks",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"Travel hacks\",\n    \"count\": \"10\",\n    \"offset\": \"0\",\n    \"use_filters\": \"1\",\n    \"publish_time\": \"0\",\n    \"sort_type\": \"1\"\n}",
+        "ground_truth":{
+            "keyword":"travel hacks",
+            "count":"10",
+            "publish_time":"30"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8668317795
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find 20 live TikTok streams about cooking tips.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"cooking tips\",\n    \"count\": \"20\"\n}",
+        "ground_truth":{
+            "keyword":"cooking tips",
+            "count":"20"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6421709061
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"20 TikTok lives about cooking?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"cooking\",\n    \"count\": \"20\"\n}",
+        "ground_truth":{
+            "keyword":"cooking tips",
+            "count":"20"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6762759686
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"cooking lives right now",
+        "spec_type":"full",
+        "generated_params":"{\n    \"keyword\": \"cooking lives right now\"\n}",
+        "ground_truth":{
+            "keyword":"cooking tips",
+            "count":"20"
+        },
+        "precision":0.5,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6253926754
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Search for full-time software engineer jobs in the US, posted within the last week.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"full-time software engineer jobs in the US\",\n    \"country\": \"us\",\n    \"date_posted\": \"week\",\n    \"employment_types\": \"FULLTIME\"\n}",
+        "ground_truth":{
+            "query":"software engineer",
+            "country":"US",
+            "date_posted":"week",
+            "employment_types":"FULLTIME"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.1070532799
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Are there any recent software engineer jobs in the US right now?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"software engineer jobs in the US\",\n    \"country\": \"us\",\n    \"date_posted\": \"today\"\n}",
+        "ground_truth":{
+            "query":"software engineer",
+            "country":"US",
+            "date_posted":"week",
+            "employment_types":"FULLTIME"
+        },
+        "precision":0.75,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8072676659
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"software engineer jobs in the US",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"software engineer jobs in the US\",\n    \"country\": \"us\"\n}",
+        "ground_truth":{
+            "query":"software engineer",
+            "country":"US",
+            "date_posted":"week",
+            "employment_types":"FULLTIME"
+        },
+        "precision":0.5,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.6125981808
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Search for remote-only, full-time software engineer jobs in the US, posted within the last week.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"remote-only, full-time software engineer jobs in the US\",\n    \"country\": \"us\",\n    \"date_posted\": \"week\",\n    \"work_from_home\": \"True\",\n    \"employment_types\": \"FULLTIME\"\n}",
+        "ground_truth":{
+            "query":"software engineer",
+            "country":"US",
+            "date_posted":"week",
+            "employment_types":"FULLTIME",
+            "work_from_home":"true"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.8929784298
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"Any recent software engineer jobs in the US right now where I don't need to go to the office?",
+        "spec_type":"full",
+        "generated_params":"{\n  \"query\": \"software engineer jobs in the US work from home\",\n  \"country\": \"us\",\n  \"work_from_home\": \"True\"\n}",
+        "ground_truth":{
+            "query":"software engineer",
+            "country":"US",
+            "date_posted":"week",
+            "employment_types":"FULLTIME",
+            "work_from_home":"true"
+        },
+        "precision":0.6,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.9804875851
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"software engineer home jobs in the US",
+        "spec_type":"full",
+        "generated_params":"{\n    \"query\": \"software engineer home jobs in the US\",\n    \"country\": \"us\",\n    \"work_from_home\": \"True\"\n}",
+        "ground_truth":{
+            "query":"software engineer",
+            "country":"US",
+            "date_posted":"week",
+            "employment_types":"FULLTIME",
+            "work_from_home":"true"
+        },
+        "precision":0.6,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7007033825
+    }
+]

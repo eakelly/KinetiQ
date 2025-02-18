@@ -1,0 +1,847 @@
+[
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"London",
+            "dt":"2023-10-05",
+            "aqi":"yes"
+        },
+        "scores":66.6666666667,
+        "eval_times":0.9738230705
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.",
+        "spec_type":"full",
+        "generated_params":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"ICN.AIRPORT",
+            "departDate":"2023-10-17",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "scores":100.0,
+        "eval_times":2.4177305698
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find a flight from New York City (NYC) to Seoul (ICN) for two adults and one infant",
+        "spec_type":"full",
+        "generated_params":{
+            "originSkyId":"NYC",
+            "destinationSkyId":"ICN",
+            "originEntityId":"NYC",
+            "destinationEntityId":"ICN",
+            "date":"2023-12-01",
+            "adults":"2",
+            "infants":"1"
+        },
+        "scores":77.5,
+        "eval_times":1.4271919727
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find airports in New York City (NYC) that offer flights. Display the results in Spanish (Mexico locale).",
+        "spec_type":"full",
+        "generated_params":"{\"query\": \"New York City\", \"locale\": \"es-MX\"}",
+        "scores":100.0,
+        "eval_times":0.7903721333
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find a hotel in New York City (NYC) for two adults, checking in today and checking out next Friday. Display prices in USD.",
+        "spec_type":"full",
+        "generated_params":{
+            "geoId":"New York City",
+            "checkIn":"2023-10-05",
+            "checkOut":"2023-10-13",
+            "adults":"2",
+            "currencyCode":"USD"
+        },
+        "scores":100.0,
+        "eval_times":1.2428319454
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find a hotel in New York City (NYC). We need 2 rooms, each for one adult, who will be checking in on December 16 and checking out on December 20. Display prices in USD.",
+        "spec_type":"full",
+        "generated_params":{
+            "geoId":"New York City (NYC)",
+            "checkIn":"2023-12-16",
+            "checkOut":"2023-12-20",
+            "rooms":"2",
+            "adults":"2",
+            "currencyCode":"USD"
+        },
+        "scores":100.0,
+        "eval_times":1.3094389439
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find news articles about climate change specifically in Ireland.",
+        "spec_type":"full",
+        "generated_params":"{\"query\": \"climate change\", \"region\": \"IE\"}",
+        "scores":76.6666666667,
+        "eval_times":0.8099210262
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find hotels that have closed down in Boston, USA, and provide their names and contact email addresses.",
+        "spec_type":"full",
+        "generated_params":{
+            "query":"hotels",
+            "region":"us",
+            "business_status":"CLOSED",
+            "fields":"name,email",
+            "lat":"42.3601",
+            "lng":"-71.0589"
+        },
+        "scores":36.6666666667,
+        "eval_times":1.2293460369
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Retrieve reviews for this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76, specifically for its location in Ireland.",
+        "spec_type":"full",
+        "generated_params":{
+            "business_id":"0x89c259b5a9bd152b:0x31453e62a3be9f76",
+            "region":"ie"
+        },
+        "scores":100.0,
+        "eval_times":1.4242801666
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Calculate 1.7777 minus 2.9057345 and round the result to five decimal places.",
+        "spec_type":"full",
+        "generated_params":"{\"numbers\": \"1.7777 - 2.9057345\", \"decimalPlaces\": \"5\"}",
+        "scores":100.0,
+        "eval_times":0.8671696186
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Search for Tamagotchi toy in new condition that are on sale in the UK.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"Tamagotchi toy",
+            "country":"gb",
+            "product_condition":"NEW",
+            "on_sale":"true"
+        },
+        "scores":100.0,
+        "eval_times":2.7110390663
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Search for new Tamagotchi toy under $20.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"Tamagotchi toy",
+            "max_price":"20",
+            "product_condition":"NEW"
+        },
+        "scores":100.0,
+        "eval_times":1.1154215336
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Give me product reviews for product with ID=11577822456427762145 in the United States and translate the results to Spanish.",
+        "spec_type":"full",
+        "generated_params":{
+            "product_id":"11577822456427762145",
+            "country":"us",
+            "language":"es"
+        },
+        "scores":100.0,
+        "eval_times":1.5125668049
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find product offers for product with ID=11577822456427762145 in the United States and translate the results to Spanish.",
+        "spec_type":"full",
+        "generated_params":"{\"product_id\": \"11577822456427762145\", \"country\": \"us\", \"language\": \"es\"}",
+        "scores":100.0,
+        "eval_times":1.0581870079
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Provide details for product with ID=11577822456427762145 available in Korea, and translate the results to English.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"11577822456427762145",
+            "country":"us",
+            "language":"en"
+        },
+        "scores":66.6666666667,
+        "eval_times":1.5911517143
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"I need the weather forecast in Paris for this week. Include information about high tides as well.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"Paris",
+            "days":"7",
+            "tides":"yes"
+        },
+        "scores":100.0,
+        "eval_times":0.8926565647
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"I\u2019m planning to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York in NYC. Please display the prices in SEK (Swedish Krona).",
+        "spec_type":"full",
+        "generated_params":{
+            "restaurantsId":"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York",
+            "currencyCode":"SEK"
+        },
+        "scores":100.0,
+        "eval_times":1.1948933601
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Give me the date of when artist with ID 2uFUBdaVGtyMqckSeCl0Qj released their album Experience.",
+        "spec_type":"full",
+        "generated_params":"{\"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\", \"type\": \"album\"}",
+        "scores":100.0,
+        "eval_times":0.8500237465
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj release their single Night?",
+        "spec_type":"full",
+        "generated_params":{
+            "artistId":"2uFUBdaVGtyMqckSeCl0Qj",
+            "type":"single"
+        },
+        "scores":100.0,
+        "eval_times":0.9654409885
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Give me the date that user sparklemilktea joined Instagram.",
+        "spec_type":"full",
+        "generated_params":"{\"username_or_id_or_url\": \"sparklemilktea\", \"include_about\": \"true\"}",
+        "scores":100.0,
+        "eval_times":0.9251101017
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Give me at least 20 followers of the user sparklemilktea.",
+        "spec_type":"full",
+        "generated_params":"{\"username_or_id_or_url\": \"sparklemilktea\", \"amount\": \"20\"}",
+        "scores":100.0,
+        "eval_times":0.8158445358
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Give me at least 20 people that the user sparklemilktea follows.",
+        "spec_type":"full",
+        "generated_params":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "scores":100.0,
+        "eval_times":1.181101799
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Show me posts by kiyomi_bori and provide the HTML code to embed them.",
+        "spec_type":"full",
+        "generated_params":{
+            "username_or_id_or_url":"kiyomi_bori",
+            "url_embed_safe":"true"
+        },
+        "scores":100.0,
+        "eval_times":1.1709649563
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Search for the user kiyomi_bori and provide an embeddable profile link.",
+        "spec_type":"full",
+        "generated_params":"{\"search_query\": \"kiyomi_bori\", \"url_embed_safe\": \"true\"}",
+        "scores":100.0,
+        "eval_times":0.9944651127
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Give me the last 10 quarterly balance sheets for MSFT from the 10-Q filings.",
+        "spec_type":"full",
+        "generated_params":{
+            "ticker":"MSFT",
+            "formtype":"10-Q",
+            "filingorder":"0"
+        },
+        "scores":100.0,
+        "eval_times":0.9393899441
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",
+        "spec_type":"full",
+        "generated_params":"{\"q\": \"London\", \"dt\": \"2023-10-17\", \"aqi\": \"yes\"}",
+        "scores":66.6666666667,
+        "eval_times":0.9858698845
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I need an affordable flight for today's date from JFK airport to Seoul for my husband and I",
+        "spec_type":"full",
+        "generated_params":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"ICN.AIRPORT",
+            "departDate":"2023-10-13",
+            "adults":"2"
+        },
+        "scores":86.0,
+        "eval_times":1.2781703472
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"My wife, newborn, and I need to visit her parents in Seoul. We're leaving from NYC.",
+        "spec_type":"full",
+        "generated_params":{
+            "originSkyId":"NYC_sky_id",
+            "destinationSkyId":"SEL_sky_id",
+            "originEntityId":"NYC_entity_id",
+            "destinationEntityId":"SEL_entity_id",
+            "date":"2023-11-01",
+            "adults":"2",
+            "infants":"1"
+        },
+        "scores":77.5,
+        "eval_times":1.8962626457
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I need flights from NYC but I can't understand English, I speak Spanish.",
+        "spec_type":"full",
+        "generated_params":"{\"query\": \"NYC\", \"locale\": \"es\"}",
+        "scores":100.0,
+        "eval_times":0.7963907719
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I need a hotel for my husband and I in NYC. We'll be staying from today until next Friday.",
+        "spec_type":"full",
+        "generated_params":{
+            "geoId":"NYC",
+            "checkIn":"2023-10-06",
+            "checkOut":"2023-10-13",
+            "adults":"2"
+        },
+        "scores":86.0,
+        "eval_times":1.1335422993
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"My coworker and I need a separate room for our business trip. We'll be in NYC from the 16th to the 20th.",
+        "spec_type":"full",
+        "generated_params":{
+            "geoId":"NYC",
+            "checkIn":"2023-11-16",
+            "checkOut":"2023-11-20",
+            "rooms":"2"
+        },
+        "scores":76.6666666667,
+        "eval_times":1.2692172527
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I've heard about climate issues in Ireland. Any recent news?",
+        "spec_type":"full",
+        "generated_params":"{\"query\": \"climate\", \"region\": \"IE\"}",
+        "scores":76.6666666667,
+        "eval_times":0.7010540962
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I need to find the contact info of the hotel I stayed at in Boston, but I think it's closed down now.",
+        "spec_type":"full",
+        "generated_params":{
+            "query":"hotel",
+            "lat":"42.3601",
+            "lng":"-71.0589",
+            "business_status":"CLOSED",
+            "extract_emails_and_contacts":"true"
+        },
+        "scores":80.0,
+        "eval_times":1.2215795517
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I need to see what people are saying about this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76 in Ireland.",
+        "spec_type":"full",
+        "generated_params":"{\"business_id\": \"0x89c259b5a9bd152b:0x31453e62a3be9f76\", \"region\": \"ie\"}",
+        "scores":100.0,
+        "eval_times":0.8973693848
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"What\u2019s 1.7777 - 2.9057345 rounded to five decimals?",
+        "spec_type":"full",
+        "generated_params":{
+            "numbers":"1.7777 - 2.9057345",
+            "decimalPlaces":"5"
+        },
+        "scores":100.0,
+        "eval_times":0.800270319
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I want to buy a brand new Tamagotchi for my niece. Are there any on sale in the UK?",
+        "spec_type":"full",
+        "generated_params":"{\"q\": \"Tamagotchi\", \"country\": \"gb\", \"product_condition\": \"NEW\", \"on_sale\": \"true\"}",
+        "scores":100.0,
+        "eval_times":1.0595963001
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I want to buy a brand new Tamagotchi for my son, but my budget is $20.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"Tamagotchi",
+            "max_price":"20",
+            "product_condition":"NEW"
+        },
+        "scores":100.0,
+        "eval_times":0.994178772
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"Show me reviews for this productwith ID=11577822456427762145, but I speak Spanish.",
+        "spec_type":"full",
+        "generated_params":{
+            "product_id":"11577822456427762145",
+            "language":"es"
+        },
+        "scores":76.6666666667,
+        "eval_times":0.8483147621
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I'm looking for offers on product with ID=11577822456427762145. I'm from the US but want to send the offers to my mom who speaks Spanish.",
+        "spec_type":"full",
+        "generated_params":"{\"product_id\": \"11577822456427762145\", \"country\": \"us\", \"language\": \"es\"}",
+        "scores":100.0,
+        "eval_times":0.733574152
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"Can you tell me about product ID=11577822456427762145 available in Korea? I can only speak English though.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"11577822456427762145",
+            "country":"us",
+            "language":"en"
+        },
+        "scores":66.6666666667,
+        "eval_times":1.3361184597
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I'm in Paris for the week and want to visit the beach. What does the weather look like this week and should I worry about high tides?",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"Paris",
+            "days":"7",
+            "tides":"yes"
+        },
+        "scores":100.0,
+        "eval_times":1.9066784382
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I want to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York but I'm from Sweden so I don't know how much the prices are.",
+        "spec_type":"full",
+        "generated_params":{
+            "restaurantsId":"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York",
+            "currencyCode":"SEK"
+        },
+        "scores":100.0,
+        "eval_times":1.3534557819
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj come out with his album Experience?",
+        "spec_type":"full",
+        "generated_params":"{\"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\", \"type\": \"album\"}",
+        "scores":100.0,
+        "eval_times":1.249011755
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj come out with his song Night?",
+        "spec_type":"full",
+        "generated_params":"{\"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\", \"type\": \"single\"}",
+        "scores":100.0,
+        "eval_times":3.0609548092
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"When did sparklemilktea join Instagram?",
+        "spec_type":"full",
+        "generated_params":"{\"username_or_id_or_url\": \"sparklemilktea\", \"include_about\": \"true\"}",
+        "scores":100.0,
+        "eval_times":0.8309881687
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"Can you tell me the top 20 followers of sparklemilktea?",
+        "spec_type":"full",
+        "generated_params":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "scores":100.0,
+        "eval_times":0.8176653385
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"Can you tell me the top 20 people who sparklemilktea follows?",
+        "spec_type":"full",
+        "generated_params":{
+            "username_or_id_or_url":"sparklemilktea",
+            "amount":"20"
+        },
+        "scores":100.0,
+        "eval_times":1.0245587826
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"Can you get posts by kiyomi_bori and make them embeddable for my website?",
+        "spec_type":"full",
+        "generated_params":"{\"username_or_id_or_url\": \"kiyomi_bori\", \"url_embed_safe\": \"true\"}",
+        "scores":100.0,
+        "eval_times":0.8758130074
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"Find kiyomi_bori's profile so I can embed it.",
+        "spec_type":"full",
+        "generated_params":"{\"search_query\": \"kiyomi_bori\", \"url_embed_safe\": \"true\"}",
+        "scores":100.0,
+        "eval_times":0.8003368378
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"Show me the last 10 quarterly reports for MSFT.",
+        "spec_type":"full",
+        "generated_params":"{\"ticker\": \"MSFT\", \"formtype\": \"10-Q\", \"filingorder\": \"9\"}",
+        "scores":100.0,
+        "eval_times":0.7870311737
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Is it a good idea to go out in London today?",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"London"
+        },
+        "scores":53.3333333333,
+        "eval_times":0.9572920799
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Can I get a good flight deal from New York to South Korea today?",
+        "spec_type":"full",
+        "generated_params":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"ICN.AIRPORT",
+            "departDate":"2023-10-05"
+        },
+        "scores":72.0,
+        "eval_times":1.1337661743
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Looking for a way to get my family to Seoul.",
+        "spec_type":"full",
+        "generated_params":{
+            "originSkyId":"YOUR_ORIGIN_SKY_ID",
+            "destinationSkyId":"SEOUL_SKY_ID",
+            "originEntityId":"YOUR_ORIGIN_ENTITY_ID",
+            "destinationEntityId":"SEOUL_ENTITY_ID",
+            "date":"YYYY-MM-DD",
+            "adults":"2",
+            "children":"2",
+            "cabinClass":"economy"
+        },
+        "scores":45.0,
+        "eval_times":1.7551951408
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Help me find flights from NYC in a language I understand.",
+        "spec_type":"full",
+        "generated_params":"{\"query\": \"NYC\", \"locale\": \"en\"}",
+        "scores":100.0,
+        "eval_times":0.7401764393
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"We need a hotel in New York for a few days.",
+        "spec_type":"full",
+        "generated_params":{
+            "geoId":"New York",
+            "checkIn":"2023-12-01",
+            "checkOut":"2023-12-05"
+        },
+        "scores":72.0,
+        "eval_times":1.3367400169
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"We're looking for a place to stay in NYC for a work trip.",
+        "spec_type":"full",
+        "generated_params":"{\"geoId\": \"NYC\", \"checkIn\": \"2023-11-01\", \"checkOut\": \"2023-11-05\"}",
+        "scores":65.0,
+        "eval_times":0.9925441742
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"What\u2019s happening to Ireland?",
+        "spec_type":"full",
+        "generated_params":"{\"query\": \"Ireland\", \"language\": \"en\", \"region\": \"IE\"}",
+        "scores":100.0,
+        "eval_times":0.8280718327
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Need info on a hotel in Boston that might not be open.",
+        "spec_type":"full",
+        "generated_params":"{\"query\": \"hotel in Boston\", \"business_status\": \"CLOSED_TEMPORARILY,CLOSED\"}",
+        "scores":76.6666666667,
+        "eval_times":0.8456969261
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"What's going on with this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76 in Ireland?",
+        "spec_type":"full",
+        "generated_params":"{\"business_id\": \"0x89c259b5a9bd152b:0x31453e62a3be9f76\", \"region\": \"ie\"}",
+        "scores":100.0,
+        "eval_times":0.9754486084
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Solve 1.7777 - 2.9057345 with rounding.",
+        "spec_type":"full",
+        "generated_params":{
+            "numbers":"1.7777 - 2.9057345",
+            "decimalPlaces":"2"
+        },
+        "scores":100.0,
+        "eval_times":1.1045951843
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"I\u2019m looking for a Tamagotchi in the UK.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"Tamagotchi",
+            "country":"gb"
+        },
+        "scores":65.0,
+        "eval_times":0.8615343571
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"I need a Tamagotchi for my son that is not too expensive.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"Tamagotchi",
+            "country":"us",
+            "language":"en",
+            "sort_by":"LOWEST_PRICE"
+        },
+        "scores":23.3333333333,
+        "eval_times":1.1755452156
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Que piensa la gente sobre este producto con ID=11577822456427762145?",
+        "spec_type":"full",
+        "generated_params":"{\"product_id\": \"11577822456427762145\"}",
+        "scores":53.3333333333,
+        "eval_times":0.6875405312
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Show me the best deals for this product with ID=11577822456427762145 but I can't speak English.",
+        "spec_type":"full",
+        "generated_params":"{\"product_id\": \"11577822456427762145\", \"language\": \"es\"}",
+        "scores":76.6666666667,
+        "eval_times":0.8008387089
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"I want to know more about this product with ID=11577822456427762145 in Korea.",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"11577822456427762145",
+            "country":"us",
+            "language":"en"
+        },
+        "scores":66.6666666667,
+        "eval_times":1.0191326141
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Is it a good time to go to the beach in Paris this week?",
+        "spec_type":"full",
+        "generated_params":"{\"q\": \"Paris\", \"days\": \"7\", \"aqi\": \"yes\"}",
+        "scores":66.6666666667,
+        "eval_times":1.0104644299
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Give me details about Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York.",
+        "spec_type":"full",
+        "generated_params":"{\"restaurantsId\": \"Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York\"}",
+        "scores":65.0,
+        "eval_times":0.8982670307
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"When did this artist with ID=2uFUBdaVGtyMqckSeCl0Qj release Experience?",
+        "spec_type":"full",
+        "generated_params":"{\"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\", \"type\": \"album\"}",
+        "scores":100.0,
+        "eval_times":1.321420908
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"When did this artist with ID=2uFUBdaVGtyMqckSeCl0Qj release Night?",
+        "spec_type":"full",
+        "generated_params":"{\"artistId\": \"2uFUBdaVGtyMqckSeCl0Qj\"}",
+        "scores":65.0,
+        "eval_times":0.7796571255
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"When did sparklemilktea start using Instagram?",
+        "spec_type":"full",
+        "generated_params":"{\"username_or_id_or_url\": \"sparklemilktea\", \"include_about\": \"true\"}",
+        "scores":100.0,
+        "eval_times":0.7774069309
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Who are some followers of sparklemilktea?",
+        "spec_type":"full",
+        "generated_params":"{\"username_or_id_or_url\": \"sparklemilktea\"}",
+        "scores":65.0,
+        "eval_times":0.8136467934
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Can you list some people who sparklemilktea follows?",
+        "spec_type":"full",
+        "generated_params":"{\"username_or_id_or_url\": \"sparklemilktea\"}",
+        "scores":65.0,
+        "eval_times":1.1949996948
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"I want to see posts by kiyomi_bori to put on my website.",
+        "spec_type":"full",
+        "generated_params":"{\"username_or_id_or_url\": \"kiyomi_bori\", \"url_embed_safe\": \"true\"}",
+        "scores":100.0,
+        "eval_times":1.009444952
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"I want to see kiyomi_bori to put on my website.",
+        "spec_type":"full",
+        "generated_params":"{\"search_query\": \"kiyomi_bori\", \"url_embed_safe\": \"true\"}",
+        "scores":100.0,
+        "eval_times":0.864692688
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Give me MSFT\u2019s latest financial reports.",
+        "spec_type":"full",
+        "generated_params":{
+            "ticker":"MSFT"
+        },
+        "scores":53.3333333333,
+        "eval_times":0.7570369244
+    }
+]

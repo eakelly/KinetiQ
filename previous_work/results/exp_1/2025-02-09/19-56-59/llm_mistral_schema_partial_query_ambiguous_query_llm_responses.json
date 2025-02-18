@@ -1,0 +1,6 @@
+[
+    "{'q':'London','days':'1','aqi':'yes'}",
+    "{'fromId':'JFK','toId':'ICN','departDate':'2023-10-05','adults':'2','cabinClass':'economy'}",
+    "{\"q\":\"London\",\"days\":\"0\",\"aqi\":\"yes\"}",
+    "{'fromId':'JFK','toId':'SEL','departDate':'2023-10-11','adults':'2','currency_code':'USD'}"
+]

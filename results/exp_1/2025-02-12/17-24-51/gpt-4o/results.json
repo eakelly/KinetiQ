@@ -1,0 +1,77 @@
+[
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",
+        "spec_type":"full",
+        "generated_params":"{\"q\": \"London\", \"dt\": \"2023-10-04\", \"aqi\": \"yes\"}",
+        "scores":66.6666666667,
+        "eval_times":1.1605432034
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"explicit",
+        "query":"Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.",
+        "spec_type":"full",
+        "generated_params":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"ICN.AIRPORT",
+            "departDate":"2023-10-08",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "scores":100.0,
+        "eval_times":2.2153716087
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",
+        "spec_type":"full",
+        "generated_params":{
+            "q":"London",
+            "dt":"2023-10-11",
+            "hour":"15",
+            "aqi":"yes"
+        },
+        "scores":56.6666666667,
+        "eval_times":1.617500782
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"ambiguous",
+        "query":"I need an affordable flight for today's date from JFK airport to Seoul for my husband and I",
+        "spec_type":"full",
+        "generated_params":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"ICN.AIRPORT",
+            "departDate":"2023-10-15",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "scores":100.0,
+        "eval_times":1.2571918964
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Is it a good idea to go out in London today?",
+        "spec_type":"full",
+        "generated_params":"{\"q\": \"London\"}",
+        "scores":53.3333333333,
+        "eval_times":0.6826021671
+    },
+    {
+        "llm_type":"gpt-4o",
+        "query_type":"vague",
+        "query":"Can I get a good flight deal from New York to South Korea today?",
+        "spec_type":"full",
+        "generated_params":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"ICN.AIRPORT",
+            "departDate":"2023-10-13"
+        },
+        "scores":72.0,
+        "eval_times":1.0114824772
+    }
+]

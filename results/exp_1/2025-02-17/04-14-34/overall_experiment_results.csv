@@ -1,0 +1,46 @@
+llm_type,query_type,query,spec_type,generated_params,scores,eval_times,ground_truth,precision,recall,hallucination_count
+mistral,explicit,"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",full,"{""q"":""London"",""days"":""1"",""aqi"":""yes""}",,0.9317395687103271,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",1.0,,0.0
+mistral,explicit,Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.,full,"{""fromId"":""JFK.AIRPORT"",""toId"":""ICN.AIRPORT"",""departDate"":""2023-10-05"",""adults"":""2"",""cabinClass"":""ECONOMY""}",,1.459669828414917,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",1.0,,0.0
+mistral,ambiguous,"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",full,"{""q"":""London"",""days"":""1"",""aqi"":""yes""}",,1.0404577255249023,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",1.0,,0.0
+mistral,ambiguous,I need an affordable flight for today's date from JFK airport to Seoul for my husband and I,full,"{""fromId"":""JFK.AIRPORT"",""toId"":""ICN.AIRPORT"",""departDate"":""2024-08-07"",""adults"":""2"",""cabinClass"":""ECONOMY""}",,1.950422763824463,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",1.0,,0.0
+mistral,vague,Is it a good idea to go out in London today?,full,"{""q"":""London"",""days"":""1""}",,0.8326632976531982,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",0.6666666666666666,,0.0
+mistral,vague,Can I get a good flight deal from New York to South Korea today?,full,"{""fromId"":""NYC.AIRPORT"",""toId"":""SEL.AIRPORT"",""departDate"":""2023-10-04""}",,1.2386114597320557,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",0.6,,0.0
+gpt-3.5,explicit,"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",full,"{
+    ""q"": ""London"",
+    ""days"": ""1"",
+    ""aqi"": ""yes""
+}",,1.2870891094207764,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",1.0,,0.0
+gpt-3.5,explicit,Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.,full,"{
+  ""fromId"": ""JFK.AIRPORT"",
+  ""toId"": ""ICN.AIRPORT"",
+  ""departDate"": ""2022-10-09"",
+  ""adults"": ""2"",
+  ""cabinClass"": ""ECONOMY""
+}",,1.027980089187622,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",1.0,,0.0
+gpt-3.5,ambiguous,"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",full,"{
+    ""q"": ""London"",
+    ""lang"": ""en"",
+    ""aqi"": ""yes""
+}",,0.6588211059570312,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",0.6666666666666666,,0.0
+gpt-3.5,ambiguous,I need an affordable flight for today's date from JFK airport to Seoul for my husband and I,full,"{
+    ""fromId"": ""JFK.AIRPORT"",
+    ""toId"": ""ICN.AIRPORT"",
+    ""departDate"": ""2022-10-12"",
+    ""adults"": ""2""
+}",,0.9070658683776855,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",0.8,,0.0
+gpt-3.5,vague,Is it a good idea to go out in London today?,full,"{
+    ""q"": ""London"",
+    ""lang"": ""en"",
+    ""dt"": ""2023-03-28""
+}",,1.1708147525787354,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",0.3333333333333333,,0.0
+gpt-3.5,vague,Can I get a good flight deal from New York to South Korea today?,full,"{
+  ""fromId"": ""JFK.AIRPORT"",
+  ""toId"": ""ICN.AIRPORT"",
+  ""departDate"": ""2023-01-10""
+}",,0.7761883735656738,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",0.6,,0.0
+gpt-4o,explicit,"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",full,"{'q': 'London', 'dt': '2023-10-04', 'aqi': 'yes'}",,0.9313952922821045,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",0.6666666666666666,,0.0
+gpt-4o,explicit,Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.,full,"{'fromId': 'JFK.AIRPORT', 'toId': 'ICN.AIRPORT', 'departDate': '2023-10-19', 'adults': '2', 'cabinClass': 'ECONOMY'}",,1.0868091583251953,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",1.0,,0.0
+gpt-4o,ambiguous,"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",full,"{""q"": ""London"", ""dt"": ""2023-10-10"", ""hour"": ""15"", ""aqi"": ""yes""}",,1.2168188095092773,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",0.6666666666666666,,0.0
+gpt-4o,ambiguous,I need an affordable flight for today's date from JFK airport to Seoul for my husband and I,full,"{'fromId': 'JFK.AIRPORT', 'toId': 'ICN.AIRPORT', 'departDate': '2023-10-18', 'adults': '2'}",,1.371852159500122,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",0.8,,0.0
+gpt-4o,vague,Is it a good idea to go out in London today?,full,"{""q"": ""London""}",,0.9246330261230469,"{'q': 'London', 'days': '1', 'aqi': 'yes'}",0.3333333333333333,,0.0
+gpt-4o,vague,Can I get a good flight deal from New York to South Korea today?,full,"{'fromId': 'JFK.AIRPORT', 'toId': 'ICN.AIRPORT', 'departDate': '2023-10-13'}",,1.8981459140777588,"{'fromId': 'JFK.AIRPORT', 'toId': 'STO.AIRPORT', 'departDate': '2024-12-15', 'adults': '2', 'cabinClass': 'ECONOMY'}",0.6,,0.0

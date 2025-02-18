@@ -1,0 +1,93 @@
+llm_type,query_type,query,spec_type,generated_params,scores,eval_times
+mistral,explicit,"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",full,"{""q"":""London"",""days"":""1"",""aqi"":""yes""}",100.0,0.8375916481018066
+mistral,explicit,Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.,full,"{""fromId"":""JFK.AIRPORT"",""toId"":""ICN.AIRPORT"",""departDate"":""2024-08-06"",""adults"":""2"",""cabinClass"":""ECONOMY""}",100.0,1.4353902339935303
+mistral,explicit,Find a flight from New York City (NYC) to Seoul (ICN) for two adults and one infant,full,"{
+  ""originSkyId"": ""NYC_SKYID"",
+  ""destinationSkyId"": ""ICN_SKYID"",
+  ""originEntityId"": ""NYC_ENTITYID"",
+  ""destinationEntityId"": ""ICN_ENTITYID"",
+  ""date"": ""YYYY-MM-DD"",
+  ""adults"": 2,
+  ""infants"": 1
+}",77.5,2.1034839153289795
+mistral,explicit,Find airports in New York City (NYC) that offer flights. Display the results in Spanish (Mexico locale).,full,"{""query"":""New York City"",""locale"":""es_MX""}",100.0,0.7557859420776367
+mistral,explicit,"Find a hotel in New York City (NYC) for two adults, checking in today and checking out next Friday. Display prices in USD.",full,"{""geoId"":""g60813"",""checkIn"":""2024-08-07"",""checkOut"":""2024-08-16"",""adults"":""2"",""currencyCode"":""USD""}",100.0,2.100119113922119
+mistral,explicit,"Find a hotel in New York City (NYC). We need 2 rooms, each for one adult, who will be checking in on December 16 and checking out on December 20. Display prices in USD.",full,"{""geoId"":""g60763"",""checkIn"":""2023-12-16"",""checkOut"":""2023-12-20"",""rooms"":2,""adults"":2,""currencyCode"":""USD""}",100.0,1.4591968059539795
+mistral,explicit,Find news articles about climate change specifically in Ireland.,full,"{""query"":""climate change"",""region"":""IE""}",76.66666666666667,0.6372342109680176
+mistral,explicit,"Find hotels that have closed down in Boston, USA, and provide their names and contact email addresses.",full,"{""query"":""hotels Boston USA"",""business_status"":""CLOSED"",""extract_emails_and_contacts"":True,""fields"":""business_id,name,email"",""region"":""us""}",-1.0,1.236847162246704
+mistral,explicit,"Retrieve reviews for this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76, specifically for its location in Ireland.",full,"{""business_id"":""0x89c259b5a9bd152b:0x31453e62a3be9f76"",""region"":""ie"",""language"":""en""}",85.0,1.9284098148345947
+mistral,explicit,Calculate 1.7777 minus 2.9057345 and round the result to five decimal places.,full,"{""numbers"":""1.7777-2.9057345"",""decimalPlaces"":""5""}",100.0,1.0777828693389893
+mistral,explicit,Search for Tamagotchi toy in new condition that are on sale in the UK.,full,"{""q"":""Tamagotchi toy"",""country"":""gb"",""product_condition"":""NEW"",""on_sale"":true}",100.0,1.0681250095367432
+mistral,explicit,Search for new Tamagotchi toy under $20.,full,"{""q"":""Tamagotchi toy"",""country"":""us"",""language"":""en"",""page"":1,""limit"":30,""sort_by"":""BEST_MATCH"",""max_price"":20,""product_condition"":""NEW"",""min_rating"":""ANY""}",40.0,2.6408531665802
+mistral,explicit,Give me product reviews for product with ID=11577822456427762145 in the United States and translate the results to Spanish.,full,"{""product_id"":""11577822456427762145"",""country"":""us"",""language"":""es""}",100.0,1.1069962978363037
+mistral,explicit,Find product offers for product with ID=11577822456427762145 in the United States and translate the results to Spanish.,full,"{""product_id"":""11577822456427762145"",""country"":""us"",""language"":""es""}",100.0,1.0495502948760986
+mistral,explicit,"Provide details for product with ID=11577822456427762145 available in Korea, and translate the results to English.",full,"{""q"":""11577822456427762145"",""country"":""kr"",""language"":""en""}",66.66666666666667,1.1038458347320557
+mistral,explicit,I need the weather forecast in Paris for this week. Include information about high tides as well.,full,"{""q"":""Paris"",""days"":7,""tides"":""yes""}",100.0,1.0943832397460938
+mistral,explicit,I’m planning to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York in NYC. Please display the prices in SEK (Swedish Krona).,full,"{""restaurantsId"":""Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York"",""currencyCode"":""SEK""}",100.0,3.4476916790008545
+mistral,explicit,Give me the date of when artist with ID 2uFUBdaVGtyMqckSeCl0Qj released their album Experience.,full,"{""artistId"":""2uFUBdaVGtyMqckSeCl0Qj"",""type"":""album""}",100.0,0.9967966079711914
+mistral,explicit,When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj release their single Night?,full,"{""artistId"":""2uFUBdaVGtyMqckSeCl0Qj"",""type"":""single""}",100.0,0.9673018455505371
+mistral,explicit,Give me the date that user sparklemilktea joined Instagram.,full,"{""username_or_id_or_url"":""sparklemilktea"",""include_about"":""true""}",100.0,0.938662052154541
+mistral,explicit,Give me at least 20 followers of the user sparklemilktea.,full,"{""username_or_id_or_url"":""sparklemilktea"",""amount"":""20""}",100.0,0.9300916194915771
+mistral,explicit,Give me at least 20 people that the user sparklemilktea follows.,full,"{""username_or_id_or_url"":""sparklemilktea"",""amount"":""20""}",100.0,1.1991596221923828
+mistral,explicit,Show me posts by kiyomi_bori and provide the HTML code to embed them.,full,"{""username_or_id_or_url"":""kiyomi_bori"",""url_embed_safe"":""true""}",100.0,1.0438435077667236
+mistral,explicit,Search for the user kiyomi_bori and provide an embeddable profile link.,full,"{""search_query"":""kiyomi_bori"",""url_embed_safe"":""true""}",100.0,0.7852802276611328
+mistral,explicit,Give me the last 10 quarterly balance sheets for MSFT from the 10-Q filings.,full,"{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":0}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":1}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":2}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":3}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":4}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":5}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":6}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":7}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":8}
+{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":9}",-1.0,8.848565101623535
+mistral,ambiguous,"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",full,"{""q"":""London"",""days"":""1"",""aqi"":""yes""}",100.0,0.9365620613098145
+mistral,ambiguous,I need an affordable flight for today's date from JFK airport to Seoul for my husband and I,full,"{""fromId"":""JFK.AIRPORT"",""toId"":""ICN.AIRPORT"",""departDate"":""2024-08-07"",""adults"":""2"",""cabinClass"":""ECONOMY""}",100.0,4.24314022064209
+mistral,ambiguous,"My wife, newborn, and I need to visit her parents in Seoul. We're leaving from NYC.",full,"{""originSkyId"":""NYC"",""destinationSkyId"":""SEL"",""originEntityId"":""NYC"",""destinationEntityId"":""SEL"",""date"":""2023-12-01"",""adults"":2,""infants"":1,""cabinClass"":""economy""}",70.0,1.5946393013000488
+mistral,ambiguous,"I need flights from NYC but I can't understand English, I speak Spanish.",full,"{""query"":""NYC"",""locale"":""es-ES""}",100.0,0.9063980579376221
+mistral,ambiguous,I need a hotel for my husband and I in NYC. We'll be staying from today until next Friday.,full,"{""geoId"":""g60763"",""checkIn"":""2023-10-05"",""checkOut"":""2023-10-13"",""adults"":""2"",""rooms"":""1""}",80.0,1.6730685234069824
+mistral,ambiguous,My coworker and I need a separate room for our business trip. We'll be in NYC from the 16th to the 20th.,full,"{""geoId"":""g60763"",""checkIn"":""2023-10-16"",""checkOut"":""2023-10-20"",""rooms"":2,""adults"":2}",88.33333333333333,1.5248453617095947
+mistral,ambiguous,I've heard about climate issues in Ireland. Any recent news?,full,"{""query"":""climate issues Ireland"",""region"":""IE""}",76.66666666666667,0.6330256462097168
+mistral,ambiguous,"I need to find the contact info of the hotel I stayed at in Boston, but I think it's closed down now.",full,"{""query"":""hotel Boston"",""business_status"":""CLOSED"",""extract_emails_and_contacts"":True,""limit"":""20"",""language"":""en"",""region"":""us"",""zoom"":""13""}",-1.0,1.3408098220825195
+mistral,ambiguous,I need to see what people are saying about this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76 in Ireland.,full,"{""business_id"":""0x89c259b5a9bd152b:0x31453e62a3be9f76"",""region"":""ie"",""language"":""en""}",85.0,1.476855993270874
+mistral,ambiguous,What’s 1.7777 - 2.9057345 rounded to five decimals?,full,"{""numbers"":""1.7777-2.9057345"",""decimalPlaces"":""5""}",100.0,0.9727001190185547
+mistral,ambiguous,I want to buy a brand new Tamagotchi for my niece. Are there any on sale in the UK?,full,"{""q"":""Tamagotchi"",""country"":""gb"",""language"":""en"",""product_condition"":""NEW"",""on_sale"":true}",92.5,1.1024200916290283
+mistral,ambiguous,"I want to buy a brand new Tamagotchi for my son, but my budget is $20.",full,"{""q"":""Tamagotchi"",""country"":""us"",""language"":""en"",""page"":1,""limit"":30,""sort_by"":""BEST_MATCH"",""max_price"":20,""product_condition"":""NEW""}",50.0,1.6869113445281982
+mistral,ambiguous,"Show me reviews for this productwith ID=11577822456427762145, but I speak Spanish.",full,"{""product_id"":""11577822456427762145"",""language"":""es""}",76.66666666666667,1.169440507888794
+mistral,ambiguous,I'm looking for offers on product with ID=11577822456427762145. I'm from the US but want to send the offers to my mom who speaks Spanish.,full,"{""product_id"":""11577822456427762145"",""page"":""1"",""country"":""us"",""language"":""es""}",90.0,1.2661828994750977
+mistral,ambiguous,Can you tell me about product ID=11577822456427762145 available in Korea? I can only speak English though.,full,"{""q"":""11577822456427762145"",""country"":""gb"",""language"":""en""}",66.66666666666667,1.0502514839172363
+mistral,ambiguous,I'm in Paris for the week and want to visit the beach. What does the weather look like this week and should I worry about high tides?,full,"{""q"":""Paris"",""days"":""7"",""aqi"":""yes"",""tides"":""yes""}",90.0,0.9585061073303223
+mistral,ambiguous,I want to visit Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York but I'm from Sweden so I don't know how much the prices are.,full,"{""restaurantsId"":""Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York"",""currencyCode"":""SEK""}",100.0,1.732802152633667
+mistral,ambiguous,When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj come out with his album Experience?,full,"{""artistId"":""2uFUBdaVGtyMqckSeCl0Qj"",""type"":""album""}",100.0,0.9455573558807373
+mistral,ambiguous,When did artist with ID=2uFUBdaVGtyMqckSeCl0Qj come out with his song Night?,full,"{""artistId"":""2uFUBdaVGtyMqckSeCl0Qj"",""type"":""single""}",100.0,0.9350154399871826
+mistral,ambiguous,When did sparklemilktea join Instagram?,full,"{""username_or_id_or_url"":""sparklemilktea"",""include_about"":""true""}",100.0,0.9190466403961182
+mistral,ambiguous,Can you tell me the top 20 followers of sparklemilktea?,full,"{""username_or_id_or_url"":""sparklemilktea"",""amount"":""20""}",100.0,1.3578436374664307
+mistral,ambiguous,Can you tell me the top 20 people who sparklemilktea follows?,full,"{""username_or_id_or_url"":""sparklemilktea"",""amount"":""20""}",100.0,0.9048683643341064
+mistral,ambiguous,Can you get posts by kiyomi_bori and make them embeddable for my website?,full,"{""username_or_id_or_url"":""kiyomi_bori"",""url_embed_safe"":""true""}",100.0,0.9630529880523682
+mistral,ambiguous,Find kiyomi_bori's profile so I can embed it.,full,"{""search_query"":""kiyomi_bori"",""url_embed_safe"":""true""}",100.0,0.8068969249725342
+mistral,ambiguous,Show me the last 10 quarterly reports for MSFT.,full,"{""ticker"":""MSFT"",""formtype"":""10-Q"",""filingorder"":9}",100.0,0.9143848419189453
+mistral,vague,Is it a good idea to go out in London today?,full,"{""q"":""London"",""days"":""1""}",76.66666666666667,0.9456396102905273
+mistral,vague,Can I get a good flight deal from New York to South Korea today?,full,"{""fromId"":""NYC.AIRPORT"",""toId"":""SEL.AIRPORT"",""departDate"":""2023-10-05""}",72.0,1.393021583557129
+mistral,vague,Looking for a way to get my family to Seoul.,full,"{""originSkyId"":"""",""destinationSkyId"":""SEL"",""originEntityId"":"""",""destinationEntityId"":"""",""date"":"""",""cabinClass"":""economy"",""adults"":2,""children"":2,""infants"":0,""sortBy"":""best"",""currency"":""USD"",""market"":""en-US"",""countryCode"":""US""}",32.5,1.816246747970581
+mistral,vague,Help me find flights from NYC in a language I understand.,full,"{""query"":""NYC"",""locale"":""en-US""}",100.0,0.6846234798431396
+mistral,vague,We need a hotel in New York for a few days.,full,"{""geoId"":""g60763"",""checkIn"":""2023-10-01"",""checkOut"":""2023-10-05""}",72.0,1.3953888416290283
+mistral,vague,We're looking for a place to stay in NYC for a work trip.,full,"{'geoId': '60763', 'checkIn': '2023-10-01', 'checkOut': '2023-10-05', 'adults': 1, 'rooms': 1, 'sort': 'recommended'}",83.33333333333334,2.2148027420043945
+mistral,vague,What’s happening to Ireland?,full,"{""query"":""Ireland"",""language"":""en"",""region"":""IE""}",100.0,0.7300615310668945
+mistral,vague,Need info on a hotel in Boston that might not be open.,full,"{""query"":""hotel in Boston"",""business_status"":""CLOSED""}",76.66666666666667,0.829887866973877
+mistral,vague,What's going on with this business with id=0x89c259b5a9bd152b:0x31453e62a3be9f76 in Ireland?,full,"{""business_id"":""0x89c259b5a9bd152b:0x31453e62a3be9f76"",""region"":""ie"",""language"":""en""}",85.0,1.3434252738952637
+mistral,vague,Solve 1.7777 - 2.9057345 with rounding.,full,"{""numbers"":""1.7777-2.9057345"",""decimalPlaces"":""2""}",100.0,1.0326566696166992
+mistral,vague,I’m looking for a Tamagotchi in the UK.,full,"{""q"":""Tamagotchi"",""country"":""gb"",""language"":""en"",""page"":""1"",""limit"":""30"",""sort_by"":""BEST_MATCH"",""product_condition"":""ANY"",""min_rating"":""ANY""}",44.99999999999999,1.653904676437378
+mistral,vague,I need a Tamagotchi for my son that is not too expensive.,full,"{""q"":""Tamagotchi"",""sort_by"":""LOWEST_PRICE"",""country"":""us"",""language"":""en"",""page"":1,""limit"":30,""min_rating"":""ANY"",""product_condition"":""ANY""}",16.66666666666667,1.4161694049835205
+mistral,vague,Que piensa la gente sobre este producto con ID=11577822456427762145?,full,"{""product_id"":""11577822456427762145"",""limit"":""10"",""country"":""us"",""language"":""en""}",90.0,1.1852800846099854
+mistral,vague,Show me the best deals for this product with ID=11577822456427762145 but I can't speak English.,full,"{""product_id"":""11577822456427762145"",""page"":""1"",""country"":""us"",""language"":""en""}",90.0,1.1861991882324219
+mistral,vague,I want to know more about this product with ID=11577822456427762145 in Korea.,full,"{""q"":""11577822456427762145"",""country"":""kr""}",43.333333333333336,1.1611309051513672
+mistral,vague,Is it a good time to go to the beach in Paris this week?,full,"{""q"":""Paris"",""days"":""7"",""aqi"":""yes""}",66.66666666666667,0.7834334373474121
+mistral,vague,Give me details about Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York.,full,"{""restaurantsId"":""Restaurant_Review-g60763-d12425739-Reviews-Piccola_Cucina_Estiatorio-New_York_City_New_York""}",65.0,1.7182071208953857
+mistral,vague,When did this artist with ID=2uFUBdaVGtyMqckSeCl0Qj release Experience?,full,"{""artistId"":""2uFUBdaVGtyMqckSeCl0Qj"",""type"":""album""}",100.0,0.9469177722930908
+mistral,vague,When did this artist with ID=2uFUBdaVGtyMqckSeCl0Qj release Night?,full,"{""artistId"":""2uFUBdaVGtyMqckSeCl0Qj"",""type"":""album"",""limit"":""50""}",85.0,1.1469604969024658
+mistral,vague,When did sparklemilktea start using Instagram?,full,"{""username_or_id_or_url"":""sparklemilktea"",""include_about"":""true""}",100.0,1.2573928833007812
+mistral,vague,Who are some followers of sparklemilktea?,full,"{""username_or_id_or_url"":""sparklemilktea""}",65.0,0.9353725910186768
+mistral,vague,Can you list some people who sparklemilktea follows?,full,"{""username_or_id_or_url"":""sparklemilktea""}",65.0,0.8849103450775146
+mistral,vague,I want to see posts by kiyomi_bori to put on my website.,full,"{""username_or_id_or_url"":""kiyomi_bori"",""url_embed_safe"":""true""}",100.0,0.9427776336669922
+mistral,vague,I want to see kiyomi_bori to put on my website.,full,"{""search_query"":""kiyomi_bori"",""url_embed_safe"":""true""}",100.0,0.8086998462677002
+mistral,vague,Give me MSFT’s latest financial reports.,full,"{""ticker"":""MSFT"",""formtype"":""10-K"",""filingorder"":""0""}",100.0,1.0749218463897705

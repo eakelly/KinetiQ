@@ -1,0 +1,97 @@
+{
+  "WeatherAPI.com_Forecast_Weather_API": {
+    "name": "WeatherAPI.com_Forecast_Weather_API",
+    "description": "Fetch forecast weather information based on various query parameters.",
+    "method": "GET",
+    "endpoint": "/forecast.json",
+    "host": "weatherapi-com.p.rapidapi.com",
+    "url": "https://rapidapi.com/weatherapi/api/weatherapi-com/playground/apiendpoint_02481648-7c41-48cc-9b9f-e53596d38bab",
+    "query_parameters": {
+      "q": {
+        "type": "String",
+        "description": "Query parameter based on which data is sent back. It could be one of the following: Latitude and Longitude (Decimal degree) e.g: q=48.8567,2.3508, city name e.g.: q=Paris, US zip e.g: q=10001, UK postcode e.g: q=SW1, Canada postal code e.g: q=G2J, metar:<metar_code> e.g: q=metar:EGLL, iata:<3 digit airport code> e.g: q=iata:DXB, auto:ip for IP lookup, IP address (IPv4 and IPv6 supported) e.g: q=100.0.0.1",
+        "required": true
+      },
+      "days": {
+        "type": "Number",
+        "description": "Number of days of forecast required (optional)",
+        "required": false
+      },
+      "lang": {
+        "type": "String",
+        "description": "Returns 'condition:text' field in API in the desired language (optional)",
+        "required": false
+      },
+      "dt": {
+        "type": "Date (yyyy-mm-dd)",
+        "description": "Specific date for the forecast (optional). It should be between today and the next 10 days in yyyy-MM-dd format.",
+        "required": false
+      },
+      "hour": {
+        "type": "Number",
+        "description": "Restricting forecast or history output to a specific hour in a given day. (optional). Must be in 24 hour.",
+        "required": false
+      },
+      "aqi": {
+        "type": "String",
+        "description": "Enable/Disable Air Quality data in forecast API output: aqi=yes or aqi=no",
+        "required": false
+      },
+      "tides": {
+        "type": "String",
+        "description": "Enable/Disable Tide data in Marine API output: tides=yes or tides=no",
+        "required": false
+      }
+    }
+  },
+  "Booking.com_Flights_API": {
+    "name": "Booking.com_Flights_API",
+    "description": "Fetch flights based on query parameters.",
+    "method": "GET",
+    "endpoint": "/searchFlights.json",
+    "host": "booking-com15.p.rapidapi.com",
+    "url": "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
+    "query_parameters": {
+      "fromId": {
+        "type": "String",
+        "description": "From/Departure location Id. fromId can be retrieved from api/v1/flights/searchDestination(Search Flight Location) endpoint in Flights collection as id. In format <Airport Code>.AIRPORT",
+        "required": true
+      },
+      "toId": {
+        "type": "String",
+        "description": "To/Arrival location Id. toId can be retrieved from api/v1/flights/searchDestination(Search Flight Location) endpoint in Flights collection as id. In format <Airport Code>.AIRPORT",
+        "required": true
+      },
+      "departDate": {
+        "type": "Date (yyyy-mm-dd)",
+        "description": "Departure or travel date. Format: YYYY-MM-DD",
+        "required": true
+      },
+      "returnDate": {
+        "type": "Date (yyyy-mm-dd)",
+        "description": "Return date. Format: YYYY-MM-DD",
+        "required": false
+      },
+      "adults": {
+        "type": "Number",
+        "description": "The number of guests who are 18 years of age or older. The default value is set to 1.",
+        "required": false
+      },
+      "children": {
+        "type": "Number",
+        "description": "The number of children, including infants, who are under 18. Example: Child 1 Age = 8 months Child 2 Age = 1 year Child 3 Age = 17 years Here is what the request parameter would look like: children_age: 0,1,17",
+        "required": false
+      },
+      "cabinClass": {
+        "type": "String",
+        "description": "Search for flights that match the cabin class specified. Cabin call can be either ECONOMY, PREMIUM_ECONOMY, BUSINESS or FIRST.",
+        "required": false
+      },
+      "currency_code": {
+        "type": "String",
+        "description": "The currency code. currency_code can be retrieved from api/v1/meta/getCurrency(Get Currency) endpoint in Hotels collection.",
+        "required": false
+      }
+    }
+  }
+}

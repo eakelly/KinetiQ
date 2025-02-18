@@ -1,0 +1,10 @@
+[
+    "{\"q\": \"London\", \"dt\": \"today\", \"aqi\": \"yes\"}",
+    {
+        "fromId": "JFK",
+        "toId": "ICN",
+        "departDate": "2023-10-18",
+        "adults": "2",
+        "cabinClass": "economy"
+    }
+]

@@ -1,0 +1,28 @@
+[
+    "{\"q\": \"London\", \"dt\": \"today\", \"aqi\": \"yes\"}",
+    {
+        "fromId": "JFK",
+        "toId": "ICN",
+        "departDate": "2023-10-18",
+        "adults": "2",
+        "cabinClass": "economy"
+    },
+    {
+        "q": "London",
+        "dt": "today",
+        "hour": "afternoon",
+        "aqi": "yes"
+    },
+    {
+        "fromId": "JFK",
+        "toId": "ICN",
+        "departDate": "2023-10-20",
+        "adults": "2"
+    },
+    "{\"q\": \"London\"}",
+    {
+        "fromId": "New York",
+        "toId": "South Korea",
+        "departDate": "2023-10-15"
+    }
+]

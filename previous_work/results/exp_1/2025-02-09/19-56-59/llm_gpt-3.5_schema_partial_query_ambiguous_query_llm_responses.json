@@ -1,0 +1,6 @@
+[
+    "{\n    \"q\": \"London\",\n    \"days\": \"1\",\n    \"aqi\": \"yes\"\n}",
+    "{\n    \"fromId\": \"JFK\",\n    \"toId\": \"ICN\",\n    \"departDate\": \"today\",\n    \"adults\": \"2\",\n    \"cabinClass\": \"economy\"\n}",
+    "{\n    \"q\": \"London\",\n    \"aqi\": \"yes\"\n}",
+    "{\n    \"fromId\": \"JFK\",\n    \"toId\": \"ICN\",\n    \"departDate\": \"2022-01-12\",\n    \"adults\": \"2\"\n}"
+]

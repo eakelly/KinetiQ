@@ -1,0 +1,56 @@
+[
+    {
+        "llm_type":"mistral",
+        "query_type":"explicit",
+        "query":"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",
+        "spec_type":"full",
+        "generated_params":"{\"q\":\"London\",\"days\":\"1\",\"aqi\":\"yes\"}",
+        "scores":100.0,
+        "eval_times":0.8802001476
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"explicit",
+        "query":"Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.",
+        "spec_type":"full",
+        "generated_params":"{\"fromId\":\"JFK.AIRPORT\",\"toId\":\"ICN.AIRPORT\",\"departDate\":\"2023-10-05\",\"adults\":\"2\",\"cabinClass\":\"ECONOMY\"}",
+        "scores":100.0,
+        "eval_times":1.4680902958
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"ambiguous",
+        "query":"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",
+        "spec_type":"full",
+        "generated_params":"{\"q\":\"London\",\"days\":\"1\",\"aqi\":\"yes\"}",
+        "scores":100.0,
+        "eval_times":0.7166647911
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"ambiguous",
+        "query":"I need an affordable flight for today's date from JFK airport to Seoul for my husband and I",
+        "spec_type":"full",
+        "generated_params":"{\"fromId\":\"JFK.AIRPORT\",\"toId\":\"ICN.AIRPORT\",\"departDate\":\"2024-08-07\",\"adults\":\"2\",\"cabinClass\":\"ECONOMY\"}",
+        "scores":100.0,
+        "eval_times":2.8644182682
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"vague",
+        "query":"Is it a good idea to go out in London today?",
+        "spec_type":"full",
+        "generated_params":"{\"q\":\"London\",\"days\":\"1\"}",
+        "scores":76.6666666667,
+        "eval_times":0.6428432465
+    },
+    {
+        "llm_type":"mistral",
+        "query_type":"vague",
+        "query":"Can I get a good flight deal from New York to South Korea today?",
+        "spec_type":"full",
+        "generated_params":"{\"fromId\":\"NYC.AIRPORT\",\"toId\":\"SEL.AIRPORT\",\"departDate\":\"2023-10-06\"}",
+        "scores":72.0,
+        "eval_times":2.1387088299
+    }
+]

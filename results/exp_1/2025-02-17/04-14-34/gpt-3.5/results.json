@@ -1,0 +1,104 @@
+[
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Give me the weather forecast for London today, including temperature, precipitation, and air quality index.",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"London\",\n    \"days\": \"1\",\n    \"aqi\": \"yes\"\n}",
+        "ground_truth":{
+            "q":"London",
+            "days":"1",
+            "aqi":"yes"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.2870891094
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"explicit",
+        "query":"Find me the cheapest available economy-class flight from John F. Kennedy Airport (JFK) in New York City to Incheon International Airport (ICN) for two adults departing today.",
+        "spec_type":"full",
+        "generated_params":"{\n  \"fromId\": \"JFK.AIRPORT\",\n  \"toId\": \"ICN.AIRPORT\",\n  \"departDate\": \"2022-10-09\",\n  \"adults\": \"2\",\n  \"cabinClass\": \"ECONOMY\"\n}",
+        "ground_truth":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"STO.AIRPORT",
+            "departDate":"2024-12-15",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "precision":1.0,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.0279800892
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"What's the weather in London today? I don't know if I can go out this afternoon with my allergies, they get bad with the air quality",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"London\",\n    \"lang\": \"en\",\n    \"aqi\": \"yes\"\n}",
+        "ground_truth":{
+            "q":"London",
+            "days":"1",
+            "aqi":"yes"
+        },
+        "precision":0.6666666667,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.658821106
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"ambiguous",
+        "query":"I need an affordable flight for today's date from JFK airport to Seoul for my husband and I",
+        "spec_type":"full",
+        "generated_params":"{\n    \"fromId\": \"JFK.AIRPORT\",\n    \"toId\": \"ICN.AIRPORT\",\n    \"departDate\": \"2022-10-12\",\n    \"adults\": \"2\"\n}",
+        "ground_truth":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"STO.AIRPORT",
+            "departDate":"2024-12-15",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "precision":0.8,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.9070658684
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Is it a good idea to go out in London today?",
+        "spec_type":"full",
+        "generated_params":"{\n    \"q\": \"London\",\n    \"lang\": \"en\",\n    \"dt\": \"2023-03-28\"\n}",
+        "ground_truth":{
+            "q":"London",
+            "days":"1",
+            "aqi":"yes"
+        },
+        "precision":0.3333333333,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":1.1708147526
+    },
+    {
+        "llm_type":"gpt-3.5",
+        "query_type":"vague",
+        "query":"Can I get a good flight deal from New York to South Korea today?",
+        "spec_type":"full",
+        "generated_params":"{\n  \"fromId\": \"JFK.AIRPORT\",\n  \"toId\": \"ICN.AIRPORT\",\n  \"departDate\": \"2023-01-10\"\n}",
+        "ground_truth":{
+            "fromId":"JFK.AIRPORT",
+            "toId":"STO.AIRPORT",
+            "departDate":"2024-12-15",
+            "adults":"2",
+            "cabinClass":"ECONOMY"
+        },
+        "precision":0.6,
+        "recall":null,
+        "hallucination_count":0,
+        "eval_times":0.7761883736
+    }
+]

@@ -1,0 +1,4 @@
+[
+    "{\n    \"q\": \"London\",\n    \"days\": \"1\",\n    \"aqi\": \"yes\"\n}",
+    "{\n    \"fromId\": \"JFK\",\n    \"toId\": \"ICN\",\n    \"departDate\": \"today\",\n    \"adults\": \"2\",\n    \"cabinClass\": \"economy\"\n}"
+]
